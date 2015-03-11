@@ -14,6 +14,14 @@
 		845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845AC70A1AAE2A39009CCE96 /* Images.xcassets */; };
 		845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AC70C1AAE2A39009CCE96 /* LaunchScreen.xib */; };
 		845AC71A1AAE2A39009CCE96 /* liberoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7191AAE2A39009CCE96 /* liberoTests.m */; };
+		849571711AAFE3DD00309962 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 849571701AAFE3DD00309962 /* DismissSegue.m */; };
+		849571761AAFE9D700309962 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849571741AAFE9D700309962 /* FacebookSDK.framework */; };
+		849571771AAFE9D700309962 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849571751AAFE9D700309962 /* FBAudienceNetwork.framework */; };
+		8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 849571791AAFE9E000309962 /* gear-32x32.png */; };
+		8495717E1AAFF96F00309962 /* FBL_img_367_middle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8495717B1AAFF96F00309962 /* FBL_img_367_middle.jpg */; };
+		8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8495717C1AAFF96F00309962 /* volleyball-wallpaper-4.jpg */; };
+		849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8495717D1AAFF96F00309962 /* Volleyball6.jpg */; };
+		849571821AB0046900309962 /* volleyball-25782_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 849571811AB0046800309962 /* volleyball-25782_640.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,15 @@
 		845AC7131AAE2A39009CCE96 /* liberoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = liberoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AC7181AAE2A39009CCE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845AC7191AAE2A39009CCE96 /* liberoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liberoTests.m; sourceTree = "<group>"; };
+		8495716F1AAFE3DD00309962 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		849571701AAFE3DD00309962 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		849571741AAFE9D700309962 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		849571751AAFE9D700309962 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		849571791AAFE9E000309962 /* gear-32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear-32x32.png"; sourceTree = "<group>"; };
+		8495717B1AAFF96F00309962 /* FBL_img_367_middle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FBL_img_367_middle.jpg; sourceTree = "<group>"; };
+		8495717C1AAFF96F00309962 /* volleyball-wallpaper-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "volleyball-wallpaper-4.jpg"; sourceTree = "<group>"; };
+		8495717D1AAFF96F00309962 /* Volleyball6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Volleyball6.jpg; sourceTree = "<group>"; };
+		849571811AB0046800309962 /* volleyball-25782_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volleyball-25782_640.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849571761AAFE9D700309962 /* FacebookSDK.framework in Frameworks */,
+				849571771AAFE9D700309962 /* FBAudienceNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,8 @@
 		845AC6F11AAE2A39009CCE96 = {
 			isa = PBXGroup;
 			children = (
+				849571781AAFE9E000309962 /* images */,
+				849571731AAFE9D700309962 /* Frameworks */,
 				845AC6FC1AAE2A39009CCE96 /* libero */,
 				845AC7161AAE2A39009CCE96 /* liberoTests */,
 				845AC6FB1AAE2A39009CCE96 /* Products */,
@@ -89,6 +110,8 @@
 				845AC70A1AAE2A39009CCE96 /* Images.xcassets */,
 				845AC70C1AAE2A39009CCE96 /* LaunchScreen.xib */,
 				845AC6FD1AAE2A39009CCE96 /* Supporting Files */,
+				8495716F1AAFE3DD00309962 /* DismissSegue.h */,
+				849571701AAFE3DD00309962 /* DismissSegue.m */,
 			);
 			path = libero;
 			sourceTree = "<group>";
@@ -117,6 +140,27 @@
 				845AC7181AAE2A39009CCE96 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		849571731AAFE9D700309962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				849571741AAFE9D700309962 /* FacebookSDK.framework */,
+				849571751AAFE9D700309962 /* FBAudienceNetwork.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		849571781AAFE9E000309962 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				849571811AB0046800309962 /* volleyball-25782_640.png */,
+				8495717B1AAFF96F00309962 /* FBL_img_367_middle.jpg */,
+				8495717C1AAFF96F00309962 /* volleyball-wallpaper-4.jpg */,
+				8495717D1AAFF96F00309962 /* Volleyball6.jpg */,
+				849571791AAFE9E000309962 /* gear-32x32.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +226,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 845AC6F11AAE2A39009CCE96;
 			productRefGroup = 845AC6FB1AAE2A39009CCE96 /* Products */;
@@ -200,8 +245,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				845AC7091AAE2A39009CCE96 /* Main.storyboard in Resources */,
+				8495717E1AAFF96F00309962 /* FBL_img_367_middle.jpg in Resources */,
 				845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */,
+				8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */,
 				845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */,
+				849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */,
+				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
+				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +271,7 @@
 			files = (
 				845AC7061AAE2A39009CCE96 /* ViewController.m in Sources */,
 				845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */,
+				849571711AAFE3DD00309962 /* DismissSegue.m in Sources */,
 				845AC7001AAE2A39009CCE96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,8 +394,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/usuario/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = libero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,8 +411,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/usuario/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = libero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -412,6 +477,7 @@
 				845AC71F1AAE2A39009CCE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AC7201AAE2A39009CCE96 /* Build configuration list for PBXNativeTarget "liberoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +486,7 @@
 				845AC7221AAE2A39009CCE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
