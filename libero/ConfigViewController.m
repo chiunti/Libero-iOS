@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ConfigViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 
-@interface ViewController ()
+@interface ConfigViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ConfigViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,8 +51,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 // Call method when user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-    NSLog(@"User Id %@",user.id);
-    self.profilePictureView.profileID = user.id;
+    NSLog(@"User Id %@",user.objectID);
+    self.profilePictureView.profileID = user.objectID;
     self.nameLabel.text = user.name;
 }
 
@@ -202,7 +202,4 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     }
 }
 
-- (IBAction)btnToMainPressed:(id)sender {
-    [self performSegueWithIdentifier:@"SegueToMain" sender:self];
-}
 @end

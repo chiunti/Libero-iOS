@@ -153,7 +153,7 @@
 }
 
 -(void) showMessage:(NSString *)alertText withTitle:(NSString *)alertTitle{
-    NSLog(alertText);
+    NSLog(@"%@",alertText);
 }
 
 @end
