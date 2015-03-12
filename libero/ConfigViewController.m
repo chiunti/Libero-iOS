@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ViewDidLoad");
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.loginView2.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
@@ -58,6 +60,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+
     //self.statusLabel.text = @"You're logged in as";
     self.statusLabel.text = @"";
     for (id obj in self.loginView2.subviews)
@@ -74,7 +77,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     self.btnConfig.hidden  = false;
     self.btnSalir.hidden = false;
     self.btnToMain.hidden = false;
-
+    
     /*
     FBRequest* friendsRequest = [FBRequest requestForGraphPath:@"/me/taggable_friends"];
     [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,

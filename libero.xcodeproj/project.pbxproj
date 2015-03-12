@@ -11,6 +11,7 @@
 		84192CF61AB0CAB00032FD89 /* inWV5.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF51AB0CAB00032FD89 /* inWV5.png */; };
 		84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */; };
 		84192CFA1AB0CFF40032FD89 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF91AB0CFF40032FD89 /* check.png */; };
+		84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CFB1AB12E250032FD89 /* libero_bg.png */; };
 		845AC7001AAE2A39009CCE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC6FF1AAE2A39009CCE96 /* main.m */; };
 		845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7021AAE2A39009CCE96 /* AppDelegate.m */; };
 		845AC7061AAE2A39009CCE96 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7051AAE2A39009CCE96 /* ConfigViewController.m */; };
@@ -43,6 +44,7 @@
 		84192CF51AB0CAB00032FD89 /* inWV5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inWV5.png; sourceTree = "<group>"; };
 		84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrows-Back-icon.png"; sourceTree = "<group>"; };
 		84192CF91AB0CFF40032FD89 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		84192CFB1AB12E250032FD89 /* libero_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero_bg.png; sourceTree = "<group>"; };
 		845AC6FA1AAE2A39009CCE96 /* libero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AC6FE1AAE2A39009CCE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845AC6FF1AAE2A39009CCE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		849571781AAFE9E000309962 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				84192CFB1AB12E250032FD89 /* libero_bg.png */,
 				84192CF91AB0CFF40032FD89 /* check.png */,
 				84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */,
 				84192CF51AB0CAB00032FD89 /* inWV5.png */,
@@ -224,6 +227,7 @@
 				TargetAttributes = {
 					845AC6F91AAE2A39009CCE96 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QXF33N93KH;
 					};
 					845AC7121AAE2A39009CCE96 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -266,6 +270,7 @@
 				84192CF61AB0CAB00032FD89 /* inWV5.png in Resources */,
 				845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */,
 				849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */,
+				84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */,
 				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
 				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
 			);

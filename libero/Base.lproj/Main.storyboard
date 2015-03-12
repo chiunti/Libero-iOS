@@ -240,7 +240,7 @@
         <!--View Controller-->
         <scene sceneID="XmH-oK-j08">
             <objects>
-                <viewController id="iW5-N8-Ji5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="iW5-N8-Ji5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eh1-V9-5k8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
                                     <navigationItem title="Líbero" id="Fyx-oQ-O74">
                                         <barButtonItem key="rightBarButtonItem" image="gear-32x32.png" id="Nii-9Q-wUN">
                                             <connections>
-                                                <segue destination="iW5-N8-Ji5" kind="custom" identifier="" customClass="DismissSegue" id="o9h-1k-CCF"/>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" id="voe-DC-xHd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -312,6 +312,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="aFr-1x-8Rd" kind="modal" id="C29-2G-W4z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dWQ-ev-EIy">
                                 <rect key="frame" x="16" y="285" width="288" height="40"/>
@@ -327,6 +330,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8UL-Ye-5er" kind="modal" id="6py-nr-lnV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NwL-TL-dz6">
                                 <rect key="frame" x="16" y="349" width="288" height="40"/>
@@ -342,6 +348,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jRD-c7-3XS" kind="modal" id="aAQ-la-20l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bif-fE-H5I">
                                 <rect key="frame" x="16" y="414" width="288" height="40"/>
@@ -391,7 +400,7 @@
         <!--Config View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ConfigViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Config" id="vXZ-lx-hvc" customClass="ConfigViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1517,6 +1526,93 @@
             </objects>
             <point key="canvasLocation" x="1832" y="77"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hxt-KK-lUt">
+            <objects>
+                <viewController id="aFr-1x-8Rd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X0l-mz-iCz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="OrQ-bB-Vld">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Líbero - Entrenamientos" id="8O7-yQ-1eK">
+                                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon.png" id="ila-S1-L31">
+                                            <connections>
+                                                <segue destination="aFr-1x-8Rd" kind="custom" customClass="DismissSegue" id="CVo-gW-F33"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsJ-Iu-7Fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="-639"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8lU-2g-azk">
+            <objects>
+                <viewController id="8UL-Ye-5er" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M8W-7f-CgA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="Nu6-fD-6t7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Líbero - Eventos" id="QiN-6B-znp">
+                                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon.png" id="J7w-3Y-e6T">
+                                            <connections>
+                                                <segue destination="8UL-Ye-5er" kind="custom" customClass="DismissSegue" id="EEa-L6-RDo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6A-er-7xA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="-639"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="muh-km-pMa">
+            <objects>
+                <viewController id="jRD-c7-3XS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HdB-JL-PgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="gSR-2p-gM4">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Líbero - Evaluaciones" id="MZE-oj-j13">
+                                        <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon.png" id="cq9-YL-jof">
+                                            <connections>
+                                                <segue destination="jRD-c7-3XS" kind="custom" customClass="DismissSegue" id="50g-WM-y6T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYA-5v-X0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="-639"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Arrows-Back-icon.png" width="32" height="32"/>
@@ -1532,25 +1628,27 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BHq-t8-sdt"/>
+        <segue reference="6py-nr-lnV"/>
         <segue reference="PNm-uJ-KtF"/>
-        <segue reference="tRC-TW-ICL"/>
-        <segue reference="emp-eR-Kbe"/>
-        <segue reference="eAc-8N-IGZ"/>
-        <segue reference="1uo-iM-eWj"/>
-        <segue reference="qfe-21-Qh7"/>
-        <segue reference="w8g-hl-lu3"/>
-        <segue reference="Ar5-bk-e2f"/>
-        <segue reference="Yc4-jT-TfZ"/>
-        <segue reference="ALE-37-C0e"/>
+        <segue reference="vLW-UC-ThL"/>
+        <segue reference="BHq-t8-sdt"/>
         <segue reference="oIX-F3-W8T"/>
+        <segue reference="ALE-37-C0e"/>
         <segue reference="O54-mA-oya"/>
         <segue reference="0jb-Wr-tNt"/>
-        <segue reference="vLW-UC-ThL"/>
+        <segue reference="hrt-N9-7OW"/>
         <segue reference="2mb-lW-eYQ"/>
         <segue reference="0rF-T4-XJc"/>
         <segue reference="VmK-ew-w6f"/>
         <segue reference="mRe-op-Jd1"/>
-        <segue reference="hrt-N9-7OW"/>
+        <segue reference="eAc-8N-IGZ"/>
+        <segue reference="1uo-iM-eWj"/>
+        <segue reference="aAQ-la-20l"/>
+        <segue reference="C29-2G-W4z"/>
+        <segue reference="emp-eR-Kbe"/>
+        <segue reference="qfe-21-Qh7"/>
+        <segue reference="Ar5-bk-e2f"/>
+        <segue reference="Yc4-jT-TfZ"/>
+        <segue reference="w8g-hl-lu3"/>
     </inferredMetricsTieBreakers>
 </document>

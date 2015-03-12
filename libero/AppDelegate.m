@@ -37,6 +37,18 @@
      
     }
     // Override point for customization after application launch.
+    
+    
+    
+    // esta condicion será cuando ya se encuentra configurada la aplicacion
+    NSLog(@"launch Home");
+    if (true) {
+        UIStoryboard *storyboard = self.window.rootViewController.storyboard;
+        UIViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home"];
+        self.window.rootViewController = rootViewController;
+        [self.window makeKeyAndVisible];
+    }
+    
     return YES;
 }
 
