@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C69A6001AB947A400616096 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C69A5FF1AB947A400616096 /* ParseUI.framework */; };
 		3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */; };
 		3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */; };
 		3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C69A5FF1AB947A400616096 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageGalleryIcon.png; sourceTree = "<group>"; };
 		3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo-Video-Slr-camera-icon-150x150.png"; sourceTree = "<group>"; };
 		3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				3CF5CE241AB7AA6B00EA1FBB /* libz.dylib in Frameworks */,
 				3CF5CE251AB7AA6B00EA1FBB /* MobileCoreServices.framework in Frameworks */,
 				3CF5CE261AB7AA6B00EA1FBB /* QuartzCore.framework in Frameworks */,
+				3C69A6001AB947A400616096 /* ParseUI.framework in Frameworks */,
 				3CF5CE271AB7AA6B00EA1FBB /* Security.framework in Frameworks */,
 				3CF5CE281AB7AA6B00EA1FBB /* StoreKit.framework in Frameworks */,
 				3CF5CE291AB7AA6B00EA1FBB /* SystemConfiguration.framework in Frameworks */,
@@ -213,6 +216,7 @@
 		3CF5CE091AB7A95000EA1FBB /* Parse */ = {
 			isa = PBXGroup;
 			children = (
+				3C69A5FF1AB947A400616096 /* ParseUI.framework */,
 				3CF5CE0B1AB7A97300EA1FBB /* Parse.framework */,
 			);
 			name = Parse;
