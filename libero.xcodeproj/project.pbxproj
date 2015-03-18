@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */; };
 		3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */; };
-		3CF5CE071AB78B0600EA1FBB /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserData.m */; };
+		3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */; };
 		3CF5CE101AB7A97300EA1FBB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE0B1AB7A97300EA1FBB /* Parse.framework */; };
 		3CF5CE151AB7A9EB00EA1FBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE141AB7A9EB00EA1FBB /* AudioToolbox.framework */; };
 		3CF5CE201AB7AA6B00EA1FBB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE161AB7AA6A00EA1FBB /* CFNetwork.framework */; };
@@ -25,7 +25,7 @@
 		3CF5CE2D1AB7B2CD00EA1FBB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE2C1AB7B2CD00EA1FBB /* MBProgressHUD.m */; };
 		3CF5CE361AB7B59900EA1FBB /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE341AB7B55800EA1FBB /* libstdc++.dylib */; };
 		3CF5CE391AB7B6CF00EA1FBB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE2E1AB7B48300EA1FBB /* Social.framework */; };
-		3CF5CE411AB7D57300EA1FBB /* MenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE401AB7D57300EA1FBB /* MenuConfig.m */; };
+		3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */; };
 		3CF5CE451AB7EA6F00EA1FBB /* CellClub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */; };
 		3CF5CE461AB7EA6F00EA1FBB /* CellClub.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */; };
 		84192CF41AB0CA4A0032FD89 /* arrow_left_alt1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF31AB0CA4A0032FD89 /* arrow_left_alt1.png */; };
@@ -33,9 +33,26 @@
 		84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */; };
 		84192CFA1AB0CFF40032FD89 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF91AB0CFF40032FD89 /* check.png */; };
 		84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CFB1AB12E250032FD89 /* libero_bg.png */; };
+		84192CFF1AB8B4610032FD89 /* ClubListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192CFE1AB8B4610032FD89 /* ClubListViewController.m */; };
+		84192D021AB8B5430032FD89 /* ClubNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D011AB8B5430032FD89 /* ClubNewViewController.m */; };
+		84192D051AB8B60E0032FD89 /* ClubJoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D041AB8B60E0032FD89 /* ClubJoinViewController.m */; };
+		84192D081AB8B63A0032FD89 /* ProfileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D071AB8B63A0032FD89 /* ProfileListViewController.m */; };
+		84192D0B1AB8B6790032FD89 /* ProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D0A1AB8B6790032FD89 /* ProfileEditViewController.m */; };
+		84192D0E1AB8B69E0032FD89 /* TeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D0D1AB8B69E0032FD89 /* TeamListViewController.m */; };
+		84192D111AB8B6BC0032FD89 /* TeamEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D101AB8B6BC0032FD89 /* TeamEditViewController.m */; };
+		84192D141AB8B7B70032FD89 /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D131AB8B7B70032FD89 /* DocumentListViewController.m */; };
+		84192D171AB8B7CB0032FD89 /* DocumentEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D161AB8B7CB0032FD89 /* DocumentEditViewController.m */; };
+		84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D191AB8B8930032FD89 /* ClubAddViewController.m */; };
+		84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D1C1AB8B8E80032FD89 /* AssistantListViewController.m */; };
+		84192D201AB8B9240032FD89 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D1F1AB8B9240032FD89 /* HomeViewController.m */; };
+		84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D221AB8B9420032FD89 /* PlayerListViewController.m */; };
+		84192D261AB8B95F0032FD89 /* PlayerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */; };
+		84192D291AB8B9B00032FD89 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D281AB8B9B00032FD89 /* AttendanceViewController.m */; };
+		84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D2B1AB8BA830032FD89 /* FeeListViewController.m */; };
+		84192D2F1AB8BA900032FD89 /* FeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */; };
 		845AC7001AAE2A39009CCE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC6FF1AAE2A39009CCE96 /* main.m */; };
 		845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7021AAE2A39009CCE96 /* AppDelegate.m */; };
-		845AC7061AAE2A39009CCE96 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7051AAE2A39009CCE96 /* Configuration.m */; };
+		845AC7061AAE2A39009CCE96 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */; };
 		845AC7091AAE2A39009CCE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845AC7071AAE2A39009CCE96 /* Main.storyboard */; };
 		845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845AC70A1AAE2A39009CCE96 /* Images.xcassets */; };
 		845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AC70C1AAE2A39009CCE96 /* LaunchScreen.xib */; };
@@ -63,8 +80,8 @@
 /* Begin PBXFileReference section */
 		3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageGalleryIcon.png; sourceTree = "<group>"; };
 		3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo-Video-Slr-camera-icon-150x150.png"; sourceTree = "<group>"; };
-		3CF5CE051AB78B0600EA1FBB /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
-		3CF5CE061AB78B0600EA1FBB /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
+		3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditViewController.m; sourceTree = "<group>"; };
 		3CF5CE0B1AB7A97300EA1FBB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3CF5CE141AB7A9EB00EA1FBB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3CF5CE161AB7AA6A00EA1FBB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -82,8 +99,8 @@
 		3CF5CE2C1AB7B2CD00EA1FBB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3CF5CE2E1AB7B48300EA1FBB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3CF5CE341AB7B55800EA1FBB /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		3CF5CE3F1AB7D57300EA1FBB /* MenuConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuConfig.h; sourceTree = "<group>"; };
-		3CF5CE401AB7D57300EA1FBB /* MenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuConfig.m; sourceTree = "<group>"; };
+		3CF5CE3F1AB7D57300EA1FBB /* MenuConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuConfigViewController.h; sourceTree = "<group>"; };
+		3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuConfigViewController.m; sourceTree = "<group>"; };
 		3CF5CE421AB7EA6F00EA1FBB /* CellClub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellClub.h; sourceTree = "<group>"; };
 		3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellClub.m; sourceTree = "<group>"; };
 		3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellClub.xib; sourceTree = "<group>"; };
@@ -92,13 +109,47 @@
 		84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrows-Back-icon.png"; sourceTree = "<group>"; };
 		84192CF91AB0CFF40032FD89 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		84192CFB1AB12E250032FD89 /* libero_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero_bg.png; sourceTree = "<group>"; };
+		84192CFD1AB8B4610032FD89 /* ClubListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubListViewController.h; sourceTree = "<group>"; };
+		84192CFE1AB8B4610032FD89 /* ClubListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubListViewController.m; sourceTree = "<group>"; };
+		84192D001AB8B5430032FD89 /* ClubNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubNewViewController.h; sourceTree = "<group>"; };
+		84192D011AB8B5430032FD89 /* ClubNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubNewViewController.m; sourceTree = "<group>"; };
+		84192D031AB8B60E0032FD89 /* ClubJoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubJoinViewController.h; sourceTree = "<group>"; };
+		84192D041AB8B60E0032FD89 /* ClubJoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubJoinViewController.m; sourceTree = "<group>"; };
+		84192D061AB8B63A0032FD89 /* ProfileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileListViewController.h; sourceTree = "<group>"; };
+		84192D071AB8B63A0032FD89 /* ProfileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileListViewController.m; sourceTree = "<group>"; };
+		84192D091AB8B6790032FD89 /* ProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileEditViewController.h; sourceTree = "<group>"; };
+		84192D0A1AB8B6790032FD89 /* ProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileEditViewController.m; sourceTree = "<group>"; };
+		84192D0C1AB8B69E0032FD89 /* TeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamListViewController.h; sourceTree = "<group>"; };
+		84192D0D1AB8B69E0032FD89 /* TeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamListViewController.m; sourceTree = "<group>"; };
+		84192D0F1AB8B6BC0032FD89 /* TeamEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamEditViewController.h; sourceTree = "<group>"; };
+		84192D101AB8B6BC0032FD89 /* TeamEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamEditViewController.m; sourceTree = "<group>"; };
+		84192D121AB8B7B70032FD89 /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
+		84192D131AB8B7B70032FD89 /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
+		84192D151AB8B7CB0032FD89 /* DocumentEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentEditViewController.h; sourceTree = "<group>"; };
+		84192D161AB8B7CB0032FD89 /* DocumentEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentEditViewController.m; sourceTree = "<group>"; };
+		84192D181AB8B8930032FD89 /* ClubAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubAddViewController.h; sourceTree = "<group>"; };
+		84192D191AB8B8930032FD89 /* ClubAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubAddViewController.m; sourceTree = "<group>"; };
+		84192D1B1AB8B8E80032FD89 /* AssistantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantListViewController.h; sourceTree = "<group>"; };
+		84192D1C1AB8B8E80032FD89 /* AssistantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantListViewController.m; sourceTree = "<group>"; };
+		84192D1E1AB8B9240032FD89 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		84192D1F1AB8B9240032FD89 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		84192D211AB8B9420032FD89 /* PlayerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerListViewController.h; sourceTree = "<group>"; };
+		84192D221AB8B9420032FD89 /* PlayerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerListViewController.m; sourceTree = "<group>"; };
+		84192D241AB8B95F0032FD89 /* PlayerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerEditViewController.h; sourceTree = "<group>"; };
+		84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEditViewController.m; sourceTree = "<group>"; };
+		84192D271AB8B9B00032FD89 /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
+		84192D281AB8B9B00032FD89 /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
+		84192D2A1AB8BA830032FD89 /* FeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeListViewController.h; sourceTree = "<group>"; };
+		84192D2B1AB8BA830032FD89 /* FeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeListViewController.m; sourceTree = "<group>"; };
+		84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeNewViewController.h; sourceTree = "<group>"; };
+		84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeNewViewController.m; sourceTree = "<group>"; };
 		845AC6FA1AAE2A39009CCE96 /* libero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AC6FE1AAE2A39009CCE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845AC6FF1AAE2A39009CCE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845AC7011AAE2A39009CCE96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		845AC7021AAE2A39009CCE96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		845AC7041AAE2A39009CCE96 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
-		845AC7051AAE2A39009CCE96 /* Configuration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		845AC7041AAE2A39009CCE96 /* ConfigurationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		845AC7081AAE2A39009CCE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845AC70A1AAE2A39009CCE96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		845AC70D1AAE2A39009CCE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -195,21 +246,55 @@
 				3CF5CE2A1AB7AE2100EA1FBB /* Globals.h */,
 				845AC7011AAE2A39009CCE96 /* AppDelegate.h */,
 				845AC7021AAE2A39009CCE96 /* AppDelegate.m */,
-				845AC7041AAE2A39009CCE96 /* Configuration.h */,
-				845AC7051AAE2A39009CCE96 /* Configuration.m */,
+				845AC7041AAE2A39009CCE96 /* ConfigurationViewController.h */,
+				845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */,
 				845AC7071AAE2A39009CCE96 /* Main.storyboard */,
+				84192D2A1AB8BA830032FD89 /* FeeListViewController.h */,
+				84192D2B1AB8BA830032FD89 /* FeeListViewController.m */,
+				84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */,
+				84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */,
+				84192D271AB8B9B00032FD89 /* AttendanceViewController.h */,
+				84192D281AB8B9B00032FD89 /* AttendanceViewController.m */,
+				84192D241AB8B95F0032FD89 /* PlayerEditViewController.h */,
+				84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */,
+				84192D211AB8B9420032FD89 /* PlayerListViewController.h */,
+				84192D221AB8B9420032FD89 /* PlayerListViewController.m */,
+				84192D1E1AB8B9240032FD89 /* HomeViewController.h */,
+				84192D1F1AB8B9240032FD89 /* HomeViewController.m */,
+				84192D1B1AB8B8E80032FD89 /* AssistantListViewController.h */,
+				84192D1C1AB8B8E80032FD89 /* AssistantListViewController.m */,
+				84192D181AB8B8930032FD89 /* ClubAddViewController.h */,
+				84192D191AB8B8930032FD89 /* ClubAddViewController.m */,
+				84192D121AB8B7B70032FD89 /* DocumentListViewController.h */,
+				84192D131AB8B7B70032FD89 /* DocumentListViewController.m */,
+				84192D151AB8B7CB0032FD89 /* DocumentEditViewController.h */,
+				84192D161AB8B7CB0032FD89 /* DocumentEditViewController.m */,
+				84192D0F1AB8B6BC0032FD89 /* TeamEditViewController.h */,
+				84192D101AB8B6BC0032FD89 /* TeamEditViewController.m */,
+				84192D091AB8B6790032FD89 /* ProfileEditViewController.h */,
+				84192D0A1AB8B6790032FD89 /* ProfileEditViewController.m */,
 				845AC70A1AAE2A39009CCE96 /* Images.xcassets */,
 				845AC70C1AAE2A39009CCE96 /* LaunchScreen.xib */,
 				845AC6FD1AAE2A39009CCE96 /* Supporting Files */,
 				8495716F1AAFE3DD00309962 /* DismissSegue.h */,
 				849571701AAFE3DD00309962 /* DismissSegue.m */,
-				3CF5CE051AB78B0600EA1FBB /* UserData.h */,
-				3CF5CE061AB78B0600EA1FBB /* UserData.m */,
-				3CF5CE3F1AB7D57300EA1FBB /* MenuConfig.h */,
-				3CF5CE401AB7D57300EA1FBB /* MenuConfig.m */,
+				3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */,
+				3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */,
+				3CF5CE3F1AB7D57300EA1FBB /* MenuConfigViewController.h */,
+				3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */,
 				3CF5CE421AB7EA6F00EA1FBB /* CellClub.h */,
 				3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */,
 				3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */,
+				84192CFD1AB8B4610032FD89 /* ClubListViewController.h */,
+				84192CFE1AB8B4610032FD89 /* ClubListViewController.m */,
+				84192D001AB8B5430032FD89 /* ClubNewViewController.h */,
+				84192D011AB8B5430032FD89 /* ClubNewViewController.m */,
+				84192D031AB8B60E0032FD89 /* ClubJoinViewController.h */,
+				84192D041AB8B60E0032FD89 /* ClubJoinViewController.m */,
+				84192D061AB8B63A0032FD89 /* ProfileListViewController.h */,
+				84192D071AB8B63A0032FD89 /* ProfileListViewController.m */,
+				84192D0C1AB8B69E0032FD89 /* TeamListViewController.h */,
+				84192D0D1AB8B69E0032FD89 /* TeamListViewController.m */,
 			);
 			path = libero;
 			sourceTree = "<group>";
@@ -396,13 +481,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845AC7061AAE2A39009CCE96 /* Configuration.m in Sources */,
+				84192D171AB8B7CB0032FD89 /* DocumentEditViewController.m in Sources */,
+				845AC7061AAE2A39009CCE96 /* ConfigurationViewController.m in Sources */,
+				84192D291AB8B9B00032FD89 /* AttendanceViewController.m in Sources */,
+				84192D141AB8B7B70032FD89 /* DocumentListViewController.m in Sources */,
+				84192D261AB8B95F0032FD89 /* PlayerEditViewController.m in Sources */,
+				84192D201AB8B9240032FD89 /* HomeViewController.m in Sources */,
+				84192CFF1AB8B4610032FD89 /* ClubListViewController.m in Sources */,
+				84192D111AB8B6BC0032FD89 /* TeamEditViewController.m in Sources */,
+				84192D2F1AB8BA900032FD89 /* FeeNewViewController.m in Sources */,
+				84192D081AB8B63A0032FD89 /* ProfileListViewController.m in Sources */,
 				3CF5CE2D1AB7B2CD00EA1FBB /* MBProgressHUD.m in Sources */,
+				84192D0B1AB8B6790032FD89 /* ProfileEditViewController.m in Sources */,
 				845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */,
 				3CF5CE451AB7EA6F00EA1FBB /* CellClub.m in Sources */,
+				84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */,
+				84192D0E1AB8B69E0032FD89 /* TeamListViewController.m in Sources */,
+				84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */,
+				84192D021AB8B5430032FD89 /* ClubNewViewController.m in Sources */,
+				84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */,
+				84192D051AB8B60E0032FD89 /* ClubJoinViewController.m in Sources */,
 				849571711AAFE3DD00309962 /* DismissSegue.m in Sources */,
-				3CF5CE071AB78B0600EA1FBB /* UserData.m in Sources */,
-				3CF5CE411AB7D57300EA1FBB /* MenuConfig.m in Sources */,
+				84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */,
+				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,
+				3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */,
 				845AC7001AAE2A39009CCE96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuConfig : UIViewController
+@interface MenuConfigViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnClub;
 @property (weak, nonatomic) IBOutlet UIButton *btnPerfiles;
 @property (weak, nonatomic) IBOutlet UIButton *btnEquipos;

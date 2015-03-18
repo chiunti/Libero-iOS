@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "MenuConfig.h"
+#import "MenuConfigViewController.h"
 #import <Parse/Parse.h>
 #import "Globals.h"
 
-@implementation MenuConfig
+@implementation MenuConfigViewController
 
 
 -(void) viewDidLoad

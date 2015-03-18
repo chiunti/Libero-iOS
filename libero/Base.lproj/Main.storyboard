@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--User Data-->
+        <!--User Edit View Controller-->
         <scene sceneID="3ED-Yo-kX7">
             <objects>
-                <viewController id="eYp-EN-CfZ" customClass="UserData" sceneMemberID="viewController">
+                <viewController id="eYp-EN-CfZ" customClass="UserEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wud-Xm-pZo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-1446" y="884"/>
         </scene>
-        <!--Menu Config-->
+        <!--Menu Config View Controller-->
         <scene sceneID="qji-3h-8lE">
             <objects>
-                <viewController id="eUj-3Y-fHY" customClass="MenuConfig" sceneMemberID="viewController">
+                <viewController id="eUj-3Y-fHY" customClass="MenuConfigViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWO-dG-97B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="-688" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="XmH-oK-j08">
             <objects>
-                <viewController storyboardIdentifier="Home" id="iW5-N8-Ji5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="iW5-N8-Ji5" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eh1-V9-5k8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,10 +509,10 @@
             </objects>
             <point key="canvasLocation" x="1221" y="-1436"/>
         </scene>
-        <!--Configuration-->
+        <!--Configuration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="Config" id="vXZ-lx-hvc" customClass="Configuration" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Config" id="vXZ-lx-hvc" customClass="ConfigurationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -625,10 +625,10 @@
             </objects>
             <point key="canvasLocation" x="-688" y="-1436"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile List View Controller-->
         <scene sceneID="vD7-MQ-JAr">
             <objects>
-                <viewController id="kbq-QN-2OS" sceneMemberID="viewController">
+                <viewController id="kbq-QN-2OS" customClass="ProfileListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6Q-yO-Ez0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -673,10 +673,10 @@
             </objects>
             <point key="canvasLocation" x="-688" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Club List View Controller-->
         <scene sceneID="UEU-J5-pRZ">
             <objects>
-                <viewController id="pft-CH-hby" sceneMemberID="viewController">
+                <viewController id="pft-CH-hby" customClass="ClubListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPM-PD-seO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -704,7 +704,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellClub" id="LZE-mB-R5o">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellClub" id="LZE-mB-R5o" customClass="CellClub">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LZE-mB-R5o" id="GQt-fo-Qyw">
@@ -712,6 +712,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pft-CH-hby" id="aif-nI-1my"/>
+                                    <outlet property="delegate" destination="pft-CH-hby" id="r0C-6b-nsN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -721,10 +725,10 @@
             </objects>
             <point key="canvasLocation" x="-1061" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Document List View Controller-->
         <scene sceneID="LvY-HK-1nF">
             <objects>
-                <viewController id="O4y-OZ-d6B" sceneMemberID="viewController">
+                <viewController id="O4y-OZ-d6B" customClass="DocumentListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Lc-1N-gGL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -769,10 +773,10 @@
             </objects>
             <point key="canvasLocation" x="74" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Assistant List View Controller-->
         <scene sceneID="gOY-U4-rVN">
             <objects>
-                <viewController id="aRf-oc-uas" sceneMemberID="viewController">
+                <viewController id="aRf-oc-uas" customClass="AssistantListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leH-VA-RZV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -781,7 +785,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Líbero - Auxiliares" id="V4p-UE-haX">
+                                    <navigationItem title="Líbero - Asistentes" id="V4p-UE-haX">
                                         <barButtonItem key="leftBarButtonItem" image="Arrows-Back-icon.png" id="LYR-ni-Vr6">
                                             <connections>
                                                 <segue destination="aRf-oc-uas" kind="custom" customClass="DismissSegue" id="Sfp-bt-YP0"/>
@@ -813,10 +817,10 @@
             </objects>
             <point key="canvasLocation" x="445" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Club Add View Controller-->
         <scene sceneID="r9D-BK-u9R">
             <objects>
-                <viewController id="8Ca-Fv-1Ib" sceneMemberID="viewController">
+                <viewController id="8Ca-Fv-1Ib" customClass="ClubAddViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="keX-KF-HKj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,10 +880,10 @@
             </objects>
             <point key="canvasLocation" x="-1061" y="1673"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Edit View Controller-->
         <scene sceneID="apR-ls-dZw">
             <objects>
-                <viewController id="VwJ-GD-Vvs" sceneMemberID="viewController">
+                <viewController id="VwJ-GD-Vvs" customClass="ProfileEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQ8-2T-oTi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -934,10 +938,10 @@
             </objects>
             <point key="canvasLocation" x="-688" y="1673"/>
         </scene>
-        <!--View Controller-->
+        <!--Team List View Controller-->
         <scene sceneID="jgr-op-vg8">
             <objects>
-                <viewController id="oua-bv-ObZ" sceneMemberID="viewController">
+                <viewController id="oua-bv-ObZ" customClass="TeamListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Pq-gP-L5P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -982,10 +986,10 @@
             </objects>
             <point key="canvasLocation" x="-307" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Club New View Controller-->
         <scene sceneID="sqi-fC-EhH">
             <objects>
-                <viewController id="2wS-Px-m6B" sceneMemberID="viewController">
+                <viewController id="2wS-Px-m6B" customClass="ClubNewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xxp-1d-5BC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1040,10 +1044,10 @@
             </objects>
             <point key="canvasLocation" x="-1446" y="2428"/>
         </scene>
-        <!--View Controller-->
+        <!--Team Edit View Controller-->
         <scene sceneID="6Pb-xe-8uA">
             <objects>
-                <viewController id="Moo-Yy-pg6" sceneMemberID="viewController">
+                <viewController id="Moo-Yy-pg6" customClass="TeamEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z7v-aS-7GR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1133,10 +1137,10 @@
             </objects>
             <point key="canvasLocation" x="-307" y="1673"/>
         </scene>
-        <!--View Controller-->
+        <!--Document Edit View Controller-->
         <scene sceneID="F7A-0J-HI0">
             <objects>
-                <viewController id="q8f-61-jzt" sceneMemberID="viewController">
+                <viewController id="q8f-61-jzt" customClass="DocumentEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bk4-lZ-B8U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1176,10 +1180,10 @@
             </objects>
             <point key="canvasLocation" x="74" y="1673"/>
         </scene>
-        <!--View Controller-->
+        <!--Club Join View Controller-->
         <scene sceneID="Scq-OB-FHa">
             <objects>
-                <viewController id="xCH-ZM-xDP" sceneMemberID="viewController">
+                <viewController id="xCH-ZM-xDP" customClass="ClubJoinViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtP-ct-jlp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1234,10 +1238,10 @@
             </objects>
             <point key="canvasLocation" x="-1061" y="2428"/>
         </scene>
-        <!--View Controller-->
+        <!--Player List View Controller-->
         <scene sceneID="1Ql-uu-MSN">
             <objects>
-                <viewController id="lOG-kV-Udn" sceneMemberID="viewController">
+                <viewController id="lOG-kV-Udn" customClass="PlayerListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="boi-iC-lVn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1282,10 +1286,10 @@
             </objects>
             <point key="canvasLocation" x="-2" y="-639"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Edit View Controller-->
         <scene sceneID="7O0-n7-bdt">
             <objects>
-                <viewController id="CYK-3d-l3u" sceneMemberID="viewController">
+                <viewController id="CYK-3d-l3u" customClass="PlayerEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yKE-ZG-oYT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1409,10 +1413,10 @@
             </objects>
             <point key="canvasLocation" x="-2" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Attendance View Controller-->
         <scene sceneID="6zo-6b-gdT">
             <objects>
-                <viewController id="SEE-gv-ifd" sceneMemberID="viewController">
+                <viewController id="SEE-gv-ifd" customClass="AttendanceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2VK-YW-Pft">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1522,10 +1526,10 @@
             </objects>
             <point key="canvasLocation" x="1999" y="-639"/>
         </scene>
-        <!--View Controller-->
+        <!--Fee List View Controller-->
         <scene sceneID="LJA-8K-Fvm">
             <objects>
-                <viewController id="JLf-Iw-Seo" sceneMemberID="viewController">
+                <viewController id="JLf-Iw-Seo" customClass="FeeListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vgh-F0-OT8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1584,10 +1588,10 @@
             </objects>
             <point key="canvasLocation" x="2432" y="-639"/>
         </scene>
-        <!--View Controller-->
+        <!--Fee New View Controller-->
         <scene sceneID="cWZ-ws-JxV">
             <objects>
-                <viewController id="zf0-1C-hZk" sceneMemberID="viewController">
+                <viewController id="zf0-1C-hZk" customClass="FeeNewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abe-ma-7pw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1636,7 +1640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByM-5N-9Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="77"/>
+            <point key="canvasLocation" x="2432" y="105"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hxt-KK-lUt">
@@ -1742,27 +1746,27 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6py-nr-lnV"/>
-        <segue reference="PNm-uJ-KtF"/>
-        <segue reference="vLW-UC-ThL"/>
-        <segue reference="BHq-t8-sdt"/>
-        <segue reference="oIX-F3-W8T"/>
-        <segue reference="ALE-37-C0e"/>
-        <segue reference="O54-mA-oya"/>
-        <segue reference="0jb-Wr-tNt"/>
-        <segue reference="hrt-N9-7OW"/>
-        <segue reference="2mb-lW-eYQ"/>
-        <segue reference="0rF-T4-XJc"/>
         <segue reference="VmK-ew-w6f"/>
-        <segue reference="mRe-op-Jd1"/>
-        <segue reference="eAc-8N-IGZ"/>
-        <segue reference="1uo-iM-eWj"/>
-        <segue reference="aAQ-la-20l"/>
+        <segue reference="0rF-T4-XJc"/>
+        <segue reference="O54-mA-oya"/>
+        <segue reference="PNm-uJ-KtF"/>
         <segue reference="C29-2G-W4z"/>
-        <segue reference="emp-eR-Kbe"/>
+        <segue reference="1uo-iM-eWj"/>
         <segue reference="qfe-21-Qh7"/>
-        <segue reference="Ar5-bk-e2f"/>
+        <segue reference="aAQ-la-20l"/>
+        <segue reference="emp-eR-Kbe"/>
+        <segue reference="eAc-8N-IGZ"/>
+        <segue reference="6py-nr-lnV"/>
         <segue reference="Yc4-jT-TfZ"/>
         <segue reference="w8g-hl-lu3"/>
+        <segue reference="Ar5-bk-e2f"/>
+        <segue reference="oIX-F3-W8T"/>
+        <segue reference="ALE-37-C0e"/>
+        <segue reference="0jb-Wr-tNt"/>
+        <segue reference="vLW-UC-ThL"/>
+        <segue reference="BHq-t8-sdt"/>
+        <segue reference="2mb-lW-eYQ"/>
+        <segue reference="hrt-N9-7OW"/>
+        <segue reference="mRe-op-Jd1"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "Configuration.h"
+#import "ConfigurationViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 #import "Globals.h"
 
-@interface Configuration ()
+@interface ConfigurationViewController ()
 
 @end
 
-@implementation Configuration
+@implementation ConfigurationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "UserData.h"
+#import "UserEditViewController.h"
 #import <Parse/Parse.h>
 #import "Globals.h"
 #import "MBProgressHUD.h"
@@ -16,11 +16,11 @@ UIAlertView *alertError, *alertGuardar;
 PFObject *currentObject;
 
 
-@interface UserData ()
+@interface UserEditViewController ()
 
 @end
 
-@implementation UserData
+@implementation UserEditViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

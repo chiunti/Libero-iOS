@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserData : UIViewController<UITextFieldDelegate,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface UserEditViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 
 // Labels
