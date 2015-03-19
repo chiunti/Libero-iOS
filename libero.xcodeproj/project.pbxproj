@@ -51,6 +51,7 @@
 		84192D291AB8B9B00032FD89 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D281AB8B9B00032FD89 /* AttendanceViewController.m */; };
 		84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D2B1AB8BA830032FD89 /* FeeListViewController.m */; };
 		84192D2F1AB8BA900032FD89 /* FeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */; };
+		84192D321ABA0A150032FD89 /* ClubListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84192D311ABA0A150032FD89 /* ClubListTableViewController.m */; };
 		845AC7001AAE2A39009CCE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC6FF1AAE2A39009CCE96 /* main.m */; };
 		845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7021AAE2A39009CCE96 /* AppDelegate.m */; };
 		845AC7061AAE2A39009CCE96 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */; };
@@ -145,6 +146,8 @@
 		84192D2B1AB8BA830032FD89 /* FeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeListViewController.m; sourceTree = "<group>"; };
 		84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeNewViewController.h; sourceTree = "<group>"; };
 		84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeNewViewController.m; sourceTree = "<group>"; };
+		84192D301ABA0A150032FD89 /* ClubListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubListTableViewController.h; sourceTree = "<group>"; };
+		84192D311ABA0A150032FD89 /* ClubListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubListTableViewController.m; sourceTree = "<group>"; };
 		845AC6FA1AAE2A39009CCE96 /* libero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AC6FE1AAE2A39009CCE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845AC6FF1AAE2A39009CCE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				3CF5CE421AB7EA6F00EA1FBB /* CellClub.h */,
 				3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */,
 				3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */,
+				84192D301ABA0A150032FD89 /* ClubListTableViewController.h */,
+				84192D311ABA0A150032FD89 /* ClubListTableViewController.m */,
 				84192CFD1AB8B4610032FD89 /* ClubListViewController.h */,
 				84192CFE1AB8B4610032FD89 /* ClubListViewController.m */,
 				84192D001AB8B5430032FD89 /* ClubNewViewController.h */,
@@ -506,6 +511,7 @@
 				84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */,
 				84192D051AB8B60E0032FD89 /* ClubJoinViewController.m in Sources */,
 				849571711AAFE3DD00309962 /* DismissSegue.m in Sources */,
+				84192D321ABA0A150032FD89 /* ClubListTableViewController.m in Sources */,
 				84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */,
 				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,
 				3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */,

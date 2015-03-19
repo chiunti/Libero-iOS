@@ -12,6 +12,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.vCell.layer.borderColor    = [UIColor clearColor].CGColor;
+    self.vCell.layer.borderWidth    = 1;
+    self.vCell.clipsToBounds        = YES;
+    self.vCell.layer.cornerRadius   = 8;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
