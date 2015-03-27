@@ -8,7 +8,7 @@
 
 #import "ClubListTableViewController.h"
 #import <Parse/Parse.h>
-#import "CellClub.h"
+#import "CellClubes.h"
 
 @interface ClubListTableViewController ()
 
@@ -137,13 +137,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
-    static NSString *CellIdentifier = @"cellClub";
+    static NSString *CellIdentifier = @"CellClubes";
     
-    CellClub *cell = (CellClub *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CellClubes *cell = (CellClubes *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
-        cell = [[CellClub alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        [tableView registerNib:[UINib nibWithNibName:@"CellClubes" bundle:nil] forCellReuseIdentifier:CellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     }
+
     
     // Configure the cell
     NSString *texto = [object objectForKey:@"nombre"];
