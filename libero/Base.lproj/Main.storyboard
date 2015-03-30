@@ -693,7 +693,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yOA-1n-HOz">
                                             <connections>
-                                                <segue destination="2wS-Px-m6B" kind="modal" id="W2V-p1-bkP"/>
+                                                <segue destination="2wS-Px-m6B" kind="modal" identifier="ToClubEdit" id="W2V-p1-bkP"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

@@ -174,6 +174,10 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.parentViewController performSegueWithIdentifier:@"ToClubEdit" sender:self];
+}
 
 
 @end

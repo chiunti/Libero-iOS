@@ -27,8 +27,6 @@
 		3CF5CE361AB7B59900EA1FBB /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE341AB7B55800EA1FBB /* libstdc++.dylib */; };
 		3CF5CE391AB7B6CF00EA1FBB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5CE2E1AB7B48300EA1FBB /* Social.framework */; };
 		3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */; };
-		3CF5CE451AB7EA6F00EA1FBB /* CellClub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */; };
-		3CF5CE461AB7EA6F00EA1FBB /* CellClub.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */; };
 		84192CF41AB0CA4A0032FD89 /* arrow_left_alt1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF31AB0CA4A0032FD89 /* arrow_left_alt1.png */; };
 		84192CF61AB0CAB00032FD89 /* inWV5.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF51AB0CAB00032FD89 /* inWV5.png */; };
 		84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */; };
@@ -106,9 +104,6 @@
 		3CF5CE341AB7B55800EA1FBB /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		3CF5CE3F1AB7D57300EA1FBB /* MenuConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuConfigViewController.h; sourceTree = "<group>"; };
 		3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuConfigViewController.m; sourceTree = "<group>"; };
-		3CF5CE421AB7EA6F00EA1FBB /* CellClub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellClub.h; path = libero/CellClub.h; sourceTree = "<group>"; };
-		3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellClub.m; path = libero/CellClub.m; sourceTree = "<group>"; };
-		3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellClub.xib; path = libero/CellClub.xib; sourceTree = "<group>"; };
 		84192CF31AB0CA4A0032FD89 /* arrow_left_alt1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_alt1.png; sourceTree = "<group>"; };
 		84192CF51AB0CAB00032FD89 /* inWV5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inWV5.png; sourceTree = "<group>"; };
 		84192CF71AB0CAFC0032FD89 /* Arrows-Back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrows-Back-icon.png"; sourceTree = "<group>"; };
@@ -233,9 +228,6 @@
 		8457F72A1AC39E4700DF5615 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				3CF5CE421AB7EA6F00EA1FBB /* CellClub.h */,
-				3CF5CE431AB7EA6F00EA1FBB /* CellClub.m */,
-				3CF5CE441AB7EA6F00EA1FBB /* CellClub.xib */,
 				8457F72C1AC46C1B00DF5615 /* CellClubes.h */,
 				8457F72D1AC46C1B00DF5615 /* CellClubes.m */,
 				8457F72E1AC46C1B00DF5615 /* CellClubes.xib */,
@@ -484,7 +476,6 @@
 				845AC7091AAE2A39009CCE96 /* Main.storyboard in Resources */,
 				8495717E1AAFF96F00309962 /* FBL_img_367_middle.jpg in Resources */,
 				3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */,
-				3CF5CE461AB7EA6F00EA1FBB /* CellClub.xib in Resources */,
 				845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */,
 				8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */,
 				84192CF41AB0CA4A0032FD89 /* arrow_left_alt1.png in Resources */,
@@ -528,7 +519,6 @@
 				3CF5CE2D1AB7B2CD00EA1FBB /* MBProgressHUD.m in Sources */,
 				84192D0B1AB8B6790032FD89 /* ProfileEditViewController.m in Sources */,
 				845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */,
-				3CF5CE451AB7EA6F00EA1FBB /* CellClub.m in Sources */,
 				84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */,
 				84192D0E1AB8B69E0032FD89 /* TeamListViewController.m in Sources */,
 				84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */,
