@@ -129,10 +129,12 @@
     
     return query;
 }
+
+
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 64;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
@@ -152,7 +154,12 @@
     NSString *texto = [object objectForKey:@"nombre"];
     cell.lblTitle.text = texto;
     
-    //cell.lblSubtitle.text = [[object objectForKey:@"disciplina"] objectForKey:@"nombre"];
+    
+
+    PFObject *disciplina = [object objectForKey:@"disciplina"];
+    [disciplina fetch];
+    
+    cell.lblSubtitle.text = [disciplina objectForKey:@"nombre"];
     
     
     PFFile *theImage = [object objectForKey:@"imagen"];
