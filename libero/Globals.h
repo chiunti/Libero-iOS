@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 #import <FacebookSDK/FacebookSDK.h>
+#import <Parse/Parse.h>
 
 #ifndef libero_Globals_h
 #define libero_Globals_h
@@ -21,3 +22,6 @@
 //NSString *fbEmail;
 UIImage  *fbProfilePicture;
 id<FBGraphUser> fbUser;
+
+
+PFObject *currentClub;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--User Edit View Controller-->
@@ -1145,7 +1145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRz-m0-7eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1446" y="2428"/>
+            <point key="canvasLocation" x="-1446" y="1673"/>
         </scene>
         <!--Team Edit View Controller-->
         <scene sceneID="6Pb-xe-8uA">
@@ -1339,7 +1339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psw-dW-6W9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1061" y="2428"/>
+            <point key="canvasLocation" x="-1845" y="1673"/>
         </scene>
         <!--Player List View Controller-->
         <scene sceneID="1Ql-uu-MSN">
@@ -1849,26 +1849,26 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="O54-mA-oya"/>
-        <segue reference="PNm-uJ-KtF"/>
-        <segue reference="6py-nr-lnV"/>
         <segue reference="eAc-8N-IGZ"/>
-        <segue reference="emp-eR-Kbe"/>
-        <segue reference="aAQ-la-20l"/>
-        <segue reference="qfe-21-Qh7"/>
-        <segue reference="C29-2G-W4z"/>
-        <segue reference="1uo-iM-eWj"/>
-        <segue reference="Ar5-bk-e2f"/>
-        <segue reference="w8g-hl-lu3"/>
-        <segue reference="Yc4-jT-TfZ"/>
+        <segue reference="PNm-uJ-KtF"/>
+        <segue reference="0jb-Wr-tNt"/>
+        <segue reference="O54-mA-oya"/>
         <segue reference="BHq-t8-sdt"/>
         <segue reference="ALE-37-C0e"/>
-        <segue reference="0jb-Wr-tNt"/>
         <segue reference="vLW-UC-ThL"/>
         <segue reference="oIX-F3-W8T"/>
+        <segue reference="W2V-p1-bkP"/>
         <segue reference="hrt-N9-7OW"/>
         <segue reference="2mb-lW-eYQ"/>
+        <segue reference="emp-eR-Kbe"/>
+        <segue reference="1uo-iM-eWj"/>
+        <segue reference="qfe-21-Qh7"/>
+        <segue reference="6py-nr-lnV"/>
+        <segue reference="aAQ-la-20l"/>
+        <segue reference="C29-2G-W4z"/>
+        <segue reference="w8g-hl-lu3"/>
+        <segue reference="Yc4-jT-TfZ"/>
+        <segue reference="Ar5-bk-e2f"/>
         <segue reference="mRe-op-Jd1"/>
-        <segue reference="VmK-ew-w6f"/>
     </inferredMetricsTieBreakers>
 </document>

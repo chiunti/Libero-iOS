@@ -13,7 +13,7 @@
 
 
 UIAlertView *alertError, *alertGuardar;
-PFObject *currentObject;
+//PFObject *currentObject;
 
 @interface ClubNewViewController ()
 {
@@ -48,25 +48,25 @@ PFObject *currentObject;
     maDisciplina = [NSMutableArray arrayWithArray:[query findObjects]];
     
     
-    query = [PFQuery queryWithClassName:@"club"];
+    //query = [PFQuery queryWithClassName:@"club"];
     //[query fromLocalDatastore];
-    [query whereKey:@"fbId" equalTo:fbUser.objectID];
-    NSArray *arreglo = [query findObjects];
+    //[query whereKey:@"fbId" equalTo:fbUser.objectID];
+    //NSArray *arreglo = [query findObjects];
     
     // asignar nuevo o editar existente
     
     
     //if (arreglo.count == 0 )
-    if (true )
+    if (currentClub == nil )
     {
-        currentObject = [PFObject objectWithClassName:@"club"];
+        currentClub = [PFObject objectWithClassName:@"club"];
         self.txtNombre.text      = @"";
         self.imgPhoto.image      = [[UIImage alloc] init];
     } else {
-        currentObject = [arreglo objectAtIndex:0];
+        //currentClub = [arreglo objectAtIndex:0];
         //Leer datos del currentObject
-        self.txtNombre.text      = currentObject[@"nombre"];
-        PFFile *img = currentObject[@"imagen"];
+        self.txtNombre.text      = currentClub[@"nombre"];
+        PFFile *img = currentClub[@"imagen"];
         self.imgPhoto.image = [UIImage imageWithData:[img getData]];
     }
     
@@ -188,16 +188,17 @@ PFObject *currentObject;
     }
     
     
-    currentObject[@"nombre"] = self.txtNombre.text;
-    currentObject[@"fbId"] = fbUser.objectID;
+    currentClub[@"nombre"] = self.txtNombre.text;
+    currentClub[@"disciplina"] = maDisciplina [[self.pvDisciplina  selectedRowInComponent:0]];
+    currentClub[@"fbId"] = fbUser.objectID;
     
     
     NSData *imageData = UIImageJPEGRepresentation(self.imgPhoto.image, 0.8);
     PFFile *imageFile = [PFFile fileWithName:@"avatar.png" data:imageData];
     
-    currentObject[@"imagen"] = imageFile;
+    currentClub[@"imagen"] = imageFile;
     
-    [self saveDataWithObject:currentObject];
+    [self saveDataWithObject:currentClub];
 }
 
 
@@ -220,6 +221,9 @@ PFObject *currentObject;
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Actualización completa" message:@"Usuario guardado" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
+            // Notify table view to reload the recipes from Parse cloud
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"getClubes" object:self];
+
             // Dismiss the controller
             [self dismissViewControllerAnimated:YES completion:nil];
             

@@ -9,6 +9,7 @@
 #import "ClubListTableViewController.h"
 #import <Parse/Parse.h>
 #import "CellClubes.h"
+#import "Globals.h"
 
 @interface ClubListTableViewController ()
 
@@ -19,12 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:@"getClubes" object:nil];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    currentClub = nil;
+}
+
+- (void) refreshData
+{
+    [self loadObjects];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,6 +101,13 @@
 }
 */
 
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    return @"Creados";
+}
+
 /*
 #pragma mark - Navigation
 
@@ -96,6 +117,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -125,6 +148,7 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"club"];
     //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>]
+    [query whereKey:@"fbId" equalTo:fbUser.objectID];
     [query orderByDescending:@"createdAt"];
     
     return query;
@@ -176,6 +200,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    currentClub = [self objectAtIndexPath:indexPath];
     [self.parentViewController performSegueWithIdentifier:@"ToClubEdit" sender:self];
 }
 
