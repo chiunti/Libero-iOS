@@ -593,7 +593,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="n1k-De-YEK" customClass="FBLoginView">
-                                <rect key="frame" x="29" y="401" width="262" height="50"/>
+                                <rect key="frame" x="29" y="400" width="262" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
