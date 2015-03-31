@@ -12,8 +12,6 @@
 #import "Globals.h"
 
 
-UIAlertView *alertError, *alertGuardar;
-//PFObject *currentObject;
 
 @interface ClubNewViewController ()
 {
@@ -29,10 +27,6 @@ UIAlertView *alertError, *alertGuardar;
     // Do any additional setup after loading the view.
     
     [self initController];
-    
-    // Connect data
-    //self.pvDisciplina.dataSource = self;
-    //self.pvDisciplina.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,15 +42,6 @@ UIAlertView *alertError, *alertGuardar;
     maDisciplina = [NSMutableArray arrayWithArray:[query findObjects]];
     
     
-    //query = [PFQuery queryWithClassName:@"club"];
-    //[query fromLocalDatastore];
-    //[query whereKey:@"fbId" equalTo:fbUser.objectID];
-    //NSArray *arreglo = [query findObjects];
-    
-    // asignar nuevo o editar existente
-    
-    
-    //if (arreglo.count == 0 )
     if (currentClub == nil )
     {
         currentClub = [PFObject objectWithClassName:@"club"];
@@ -218,7 +203,7 @@ UIAlertView *alertError, *alertGuardar;
         
         if (!error) {
             // Show success message
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Actualización completa" message:@"Usuario guardado" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Actualización completa" message:@"Club guardado" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
             // Notify table view to reload the recipes from Parse cloud

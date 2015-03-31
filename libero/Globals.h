@@ -24,4 +24,7 @@ UIImage  *fbProfilePicture;
 id<FBGraphUser> fbUser;
 
 
-PFObject *currentClub;
+PFObject *currentClub, *currentPerfil, *currentTeam;
+
+
+UIAlertView *alertError, *alertGuardar;

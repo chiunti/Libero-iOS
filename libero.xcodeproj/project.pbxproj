@@ -67,6 +67,9 @@
 		8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8495717C1AAFF96F00309962 /* volleyball-wallpaper-4.jpg */; };
 		849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8495717D1AAFF96F00309962 /* Volleyball6.jpg */; };
 		849571821AB0046900309962 /* volleyball-25782_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 849571811AB0046800309962 /* volleyball-25782_640.png */; };
+		84B062981AC9ECD4001484A1 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B062971AC9ECD4001484A1 /* ProfileTableViewController.m */; };
+		84B0629B1ACA2DAB001484A1 /* TeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0629A1ACA2DAB001484A1 /* TeamTableViewController.m */; };
+		84B0629E1ACA300A001484A1 /* DocumentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,8 +164,8 @@
 		845AC7131AAE2A39009CCE96 /* liberoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = liberoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AC7181AAE2A39009CCE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845AC7191AAE2A39009CCE96 /* liberoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liberoTests.m; sourceTree = "<group>"; };
-		8495716F1AAFE3DD00309962 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
-		849571701AAFE3DD00309962 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		8495716F1AAFE3DD00309962 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DismissSegue.h; path = libero/DismissSegue.h; sourceTree = "<group>"; };
+		849571701AAFE3DD00309962 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DismissSegue.m; path = libero/DismissSegue.m; sourceTree = "<group>"; };
 		849571741AAFE9D700309962 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		849571751AAFE9D700309962 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		849571791AAFE9E000309962 /* gear-32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear-32x32.png"; sourceTree = "<group>"; };
@@ -170,6 +173,12 @@
 		8495717C1AAFF96F00309962 /* volleyball-wallpaper-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "volleyball-wallpaper-4.jpg"; sourceTree = "<group>"; };
 		8495717D1AAFF96F00309962 /* Volleyball6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Volleyball6.jpg; sourceTree = "<group>"; };
 		849571811AB0046800309962 /* volleyball-25782_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volleyball-25782_640.png"; sourceTree = "<group>"; };
+		84B062961AC9ECD4001484A1 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		84B062971AC9ECD4001484A1 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		84B062991ACA2DAB001484A1 /* TeamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewController.h; sourceTree = "<group>"; };
+		84B0629A1ACA2DAB001484A1 /* TeamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewController.m; sourceTree = "<group>"; };
+		84B0629C1ACA300A001484A1 /* DocumentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentTableViewController.h; sourceTree = "<group>"; };
+		84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,12 +247,14 @@
 		8457F72B1AC39F1700DF5615 /* MainApplication */ = {
 			isa = PBXGroup;
 			children = (
+				845AC7011AAE2A39009CCE96 /* AppDelegate.h */,
+				845AC7021AAE2A39009CCE96 /* AppDelegate.m */,
+				8495716F1AAFE3DD00309962 /* DismissSegue.h */,
+				849571701AAFE3DD00309962 /* DismissSegue.m */,
+				3CF5CE2A1AB7AE2100EA1FBB /* Globals.h */,
 				845AC70A1AAE2A39009CCE96 /* Images.xcassets */,
 				845AC70C1AAE2A39009CCE96 /* LaunchScreen.xib */,
 				845AC7071AAE2A39009CCE96 /* Main.storyboard */,
-				3CF5CE2A1AB7AE2100EA1FBB /* Globals.h */,
-				845AC7011AAE2A39009CCE96 /* AppDelegate.h */,
-				845AC7021AAE2A39009CCE96 /* AppDelegate.m */,
 			);
 			name = MainApplication;
 			sourceTree = "<group>";
@@ -273,51 +284,18 @@
 		845AC6FC1AAE2A39009CCE96 /* libero */ = {
 			isa = PBXGroup;
 			children = (
-				84192D1B1AB8B8E80032FD89 /* AssistantListViewController.h */,
-				84192D1C1AB8B8E80032FD89 /* AssistantListViewController.m */,
-				84192D271AB8B9B00032FD89 /* AttendanceViewController.h */,
-				84192D281AB8B9B00032FD89 /* AttendanceViewController.m */,
-				84192D181AB8B8930032FD89 /* ClubAddViewController.h */,
-				84192D191AB8B8930032FD89 /* ClubAddViewController.m */,
-				84192D031AB8B60E0032FD89 /* ClubJoinViewController.h */,
-				84192D041AB8B60E0032FD89 /* ClubJoinViewController.m */,
-				84192D301ABA0A150032FD89 /* ClubListTableViewController.h */,
-				84192D311ABA0A150032FD89 /* ClubListTableViewController.m */,
-				84192CFD1AB8B4610032FD89 /* ClubListViewController.h */,
-				84192CFE1AB8B4610032FD89 /* ClubListViewController.m */,
-				84192D001AB8B5430032FD89 /* ClubNewViewController.h */,
-				84192D011AB8B5430032FD89 /* ClubNewViewController.m */,
-				845AC7041AAE2A39009CCE96 /* ConfigurationViewController.h */,
-				845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */,
-				8495716F1AAFE3DD00309962 /* DismissSegue.h */,
-				849571701AAFE3DD00309962 /* DismissSegue.m */,
-				84192D151AB8B7CB0032FD89 /* DocumentEditViewController.h */,
-				84192D161AB8B7CB0032FD89 /* DocumentEditViewController.m */,
-				84192D121AB8B7B70032FD89 /* DocumentListViewController.h */,
-				84192D131AB8B7B70032FD89 /* DocumentListViewController.m */,
-				84192D2A1AB8BA830032FD89 /* FeeListViewController.h */,
-				84192D2B1AB8BA830032FD89 /* FeeListViewController.m */,
-				84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */,
-				84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */,
-				84192D1E1AB8B9240032FD89 /* HomeViewController.h */,
-				84192D1F1AB8B9240032FD89 /* HomeViewController.m */,
-				3CF5CE3F1AB7D57300EA1FBB /* MenuConfigViewController.h */,
-				3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */,
-				84192D241AB8B95F0032FD89 /* PlayerEditViewController.h */,
-				84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */,
-				84192D211AB8B9420032FD89 /* PlayerListViewController.h */,
-				84192D221AB8B9420032FD89 /* PlayerListViewController.m */,
-				84192D091AB8B6790032FD89 /* ProfileEditViewController.h */,
-				84192D0A1AB8B6790032FD89 /* ProfileEditViewController.m */,
-				84192D061AB8B63A0032FD89 /* ProfileListViewController.h */,
-				84192D071AB8B63A0032FD89 /* ProfileListViewController.m */,
+				84B062901AC9EAB8001484A1 /* Assistant */,
+				84B062911AC9EACC001484A1 /* Attendance */,
+				84B0628B1AC9E948001484A1 /* Club */,
+				84B0628D1AC9EA46001484A1 /* Configuration */,
+				84B062921AC9EAE2001484A1 /* Documents */,
+				84B062931AC9EAF7001484A1 /* Home */,
+				84B062941AC9EB06001484A1 /* Player */,
+				84B0628C1AC9EA26001484A1 /* Profile */,
+				84B062951AC9EB42001484A1 /* Quota */,
 				845AC6FD1AAE2A39009CCE96 /* Supporting Files */,
-				84192D0F1AB8B6BC0032FD89 /* TeamEditViewController.h */,
-				84192D101AB8B6BC0032FD89 /* TeamEditViewController.m */,
-				84192D0C1AB8B69E0032FD89 /* TeamListViewController.h */,
-				84192D0D1AB8B69E0032FD89 /* TeamListViewController.m */,
-				3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */,
-				3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */,
+				84B0628E1AC9EA95001484A1 /* Team */,
+				84B0628F1AC9EAA6001484A1 /* User */,
 			);
 			path = libero;
 			sourceTree = "<group>";
@@ -389,6 +367,131 @@
 				849571791AAFE9E000309962 /* gear-32x32.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		84B0628B1AC9E948001484A1 /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				84192D181AB8B8930032FD89 /* ClubAddViewController.h */,
+				84192D191AB8B8930032FD89 /* ClubAddViewController.m */,
+				84192D031AB8B60E0032FD89 /* ClubJoinViewController.h */,
+				84192D041AB8B60E0032FD89 /* ClubJoinViewController.m */,
+				84192D301ABA0A150032FD89 /* ClubListTableViewController.h */,
+				84192D311ABA0A150032FD89 /* ClubListTableViewController.m */,
+				84192CFD1AB8B4610032FD89 /* ClubListViewController.h */,
+				84192CFE1AB8B4610032FD89 /* ClubListViewController.m */,
+				84192D001AB8B5430032FD89 /* ClubNewViewController.h */,
+				84192D011AB8B5430032FD89 /* ClubNewViewController.m */,
+			);
+			name = Club;
+			sourceTree = "<group>";
+		};
+		84B0628C1AC9EA26001484A1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				84192D091AB8B6790032FD89 /* ProfileEditViewController.h */,
+				84192D0A1AB8B6790032FD89 /* ProfileEditViewController.m */,
+				84192D061AB8B63A0032FD89 /* ProfileListViewController.h */,
+				84192D071AB8B63A0032FD89 /* ProfileListViewController.m */,
+				84B062961AC9ECD4001484A1 /* ProfileTableViewController.h */,
+				84B062971AC9ECD4001484A1 /* ProfileTableViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		84B0628D1AC9EA46001484A1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5CE3F1AB7D57300EA1FBB /* MenuConfigViewController.h */,
+				3CF5CE401AB7D57300EA1FBB /* MenuConfigViewController.m */,
+				845AC7041AAE2A39009CCE96 /* ConfigurationViewController.h */,
+				845AC7051AAE2A39009CCE96 /* ConfigurationViewController.m */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		84B0628E1AC9EA95001484A1 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				84192D0F1AB8B6BC0032FD89 /* TeamEditViewController.h */,
+				84192D101AB8B6BC0032FD89 /* TeamEditViewController.m */,
+				84192D0C1AB8B69E0032FD89 /* TeamListViewController.h */,
+				84192D0D1AB8B69E0032FD89 /* TeamListViewController.m */,
+				84B062991ACA2DAB001484A1 /* TeamTableViewController.h */,
+				84B0629A1ACA2DAB001484A1 /* TeamTableViewController.m */,
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
+		84B0628F1AC9EAA6001484A1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */,
+				3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		84B062901AC9EAB8001484A1 /* Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				84192D1B1AB8B8E80032FD89 /* AssistantListViewController.h */,
+				84192D1C1AB8B8E80032FD89 /* AssistantListViewController.m */,
+			);
+			name = Assistant;
+			sourceTree = "<group>";
+		};
+		84B062911AC9EACC001484A1 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				84192D271AB8B9B00032FD89 /* AttendanceViewController.h */,
+				84192D281AB8B9B00032FD89 /* AttendanceViewController.m */,
+			);
+			name = Attendance;
+			sourceTree = "<group>";
+		};
+		84B062921AC9EAE2001484A1 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				84192D151AB8B7CB0032FD89 /* DocumentEditViewController.h */,
+				84192D161AB8B7CB0032FD89 /* DocumentEditViewController.m */,
+				84192D121AB8B7B70032FD89 /* DocumentListViewController.h */,
+				84192D131AB8B7B70032FD89 /* DocumentListViewController.m */,
+				84B0629C1ACA300A001484A1 /* DocumentTableViewController.h */,
+				84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */,
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
+		84B062931AC9EAF7001484A1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84192D1E1AB8B9240032FD89 /* HomeViewController.h */,
+				84192D1F1AB8B9240032FD89 /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		84B062941AC9EB06001484A1 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				84192D241AB8B95F0032FD89 /* PlayerEditViewController.h */,
+				84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */,
+				84192D211AB8B9420032FD89 /* PlayerListViewController.h */,
+				84192D221AB8B9420032FD89 /* PlayerListViewController.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		84B062951AC9EB42001484A1 /* Quota */ = {
+			isa = PBXGroup;
+			children = (
+				84192D2A1AB8BA830032FD89 /* FeeListViewController.h */,
+				84192D2B1AB8BA830032FD89 /* FeeListViewController.m */,
+				84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */,
+				84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */,
+			);
+			name = Quota;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,9 +627,12 @@
 				84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */,
 				84192D021AB8B5430032FD89 /* ClubNewViewController.m in Sources */,
 				84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */,
+				84B0629E1ACA300A001484A1 /* DocumentTableViewController.m in Sources */,
 				84192D051AB8B60E0032FD89 /* ClubJoinViewController.m in Sources */,
 				8457F72F1AC46C1B00DF5615 /* CellClubes.m in Sources */,
 				849571711AAFE3DD00309962 /* DismissSegue.m in Sources */,
+				84B062981AC9ECD4001484A1 /* ProfileTableViewController.m in Sources */,
+				84B0629B1ACA2DAB001484A1 /* TeamTableViewController.m in Sources */,
 				84192D321ABA0A150032FD89 /* ClubListTableViewController.m in Sources */,
 				84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */,
 				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,

@@ -1,26 +1,26 @@
 //
-//  ClubListTableViewController.m
+//  ProfileTableViewController.m
 //  libero
 //
-//  Created by Chiunti on 18/03/15.
+//  Created by Chiunti on 30/03/15.
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "ClubListTableViewController.h"
+#import "ProfileTableViewController.h"
 #import <Parse/Parse.h>
 #import "CellClubes.h"
 #import "Globals.h"
 
-@interface ClubListTableViewController ()
+@interface ProfileTableViewController ()
 
 @end
 
-@implementation ClubListTableViewController
+@implementation ProfileTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadObjects) name:@"getClubes" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadObjects) name:@"getPerfiles" object:nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,13 +43,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 /*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return 0;
 }
 */
 /*
@@ -96,13 +98,10 @@
 }
 */
 
-
-
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    return @"Creados";
+    return @"Perfiles";
 }
-
 /*
 #pragma mark - Navigation
 
@@ -113,8 +112,6 @@
 }
 */
 
-
-
 - (id)initWithCoder:(NSCoder *)aCoder
 {
     self = [super initWithCoder:aCoder];
@@ -122,7 +119,7 @@
         // Custom the table
         
         // The className to query on
-        self.parseClassName = @"club";
+        self.parseClassName = @"perfil";
         
         // The key of the PFObject to display in the label of the default cell style
         self.textKey = @"nombre";
@@ -141,7 +138,7 @@
 
 - (PFQuery *)queryForTable
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"club"];
+    PFQuery *query = [PFQuery queryWithClassName:@"perfil"];
     //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>]
     [query whereKey:@"fbId" equalTo:fbUser.objectID];
     [query orderByDescending:@"createdAt"];
@@ -167,12 +164,12 @@
         [tableView registerNib:[UINib nibWithNibName:@"CellClubes" bundle:nil] forCellReuseIdentifier:CellIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     }
-
+    
     
     // Configure the cell
     NSString *texto = [object objectForKey:@"nombre"];
     cell.lblTitle.text = texto;
-
+    
     PFObject *disciplina = [object objectForKey:@"disciplina"];
     [disciplina fetch];
     
@@ -192,8 +189,8 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    currentClub = [self objectAtIndexPath:indexPath];
-    [self.parentViewController performSegueWithIdentifier:@"ToClubEdit" sender:self];
+    currentPerfil = [self objectAtIndexPath:indexPath];
+    [self.parentViewController performSegueWithIdentifier:@"ToPerfilEdit" sender:self];
 }
 
 
