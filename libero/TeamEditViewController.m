@@ -223,6 +223,7 @@
     } else {
         self.txtAnio.text = [NSString stringWithFormat:@"%f", self.stepCategoria.value];
     }
+    
 }
 
 
