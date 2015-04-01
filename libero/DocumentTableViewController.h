@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/PFQueryTableViewController.h>
 
-@interface DocumentTableViewController : UITableViewController
+@interface DocumentTableViewController : PFQueryTableViewController
 
 @end

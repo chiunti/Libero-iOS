@@ -7,6 +7,9 @@
 //
 
 #import "TeamTableViewController.h"
+#import <Parse/Parse.h>
+#import "CellTeams.h"
+#import "Globals.h"
 
 @interface TeamTableViewController ()
 
@@ -17,12 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadObjects) name:@"getTeams" object:nil];
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    currentTeam = nil;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -34,15 +46,15 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
-
+*/
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
@@ -86,7 +98,10 @@
     return YES;
 }
 */
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    return @"Equipos";
+}
 /*
 #pragma mark - Navigation
 
@@ -96,5 +111,100 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (id)initWithCoder:(NSCoder *)aCoder
+{
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName = @"equipo";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"nombre";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 9;
+    }
+    return self;
+}
+
+- (PFQuery *)queryForTable
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"equipo"];
+    //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>]
+    [query whereKey:@"fbId" equalTo:fbUser.objectID];
+    [query orderByDescending:@"createdAt"];
+    
+    return query;
+}
+
+
+//-------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    
+    static NSString *CellIdentifier = @"CellTeams";
+    
+    CellTeams *cell = (CellTeams *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        [tableView registerNib:[UINib nibWithNibName:@"CellTeams" bundle:nil] forCellReuseIdentifier:CellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    }
+    
+    
+    
+    
+    
+    
+    // Configure the cell
+    cell.lblEquipo.text = [object objectForKey:@"nombre"];
+    
+    cell.lblRama.text = [object objectForKey:@"rama"];
+    
+    PFObject *club = [object objectForKey:@"club"];
+    [club fetch];
+    
+    cell.lblClub.text = [club objectForKey:@"nombre"];
+    
+    
+    
+    PFObject *disciplina = [club objectForKey:@"disciplina"];
+    [disciplina fetch];
+    
+    cell.lblDisciplina.text = [disciplina objectForKey:@"nombre"];
+    
+    PFFile *theImage = [club objectForKey:@"imagen"];
+    [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+        
+        NSData *imageFile = [theImage getData];
+        //Set the Icon Image to what ever is intended.
+        cell.imgPhoto.image = [UIImage imageWithData:imageFile];
+    }];
+    
+    
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    currentTeam = [self objectAtIndexPath:indexPath];
+    [self.parentViewController performSegueWithIdentifier:@"ToTeamEdit" sender:self];
+}
+
 
 @end

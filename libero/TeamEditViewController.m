@@ -39,19 +39,53 @@
     maClub = [NSMutableArray arrayWithArray:[query findObjects]];
     
     
-    if (currentPerfil == nil )
+    if (currentTeam == nil )
     {
-        currentPerfil = [PFObject objectWithClassName:@"equipo"];
+        // datos nuevos
+        currentTeam = [PFObject objectWithClassName:@"equipo"];
         self.txtNombre.text      = @"";
+        
+        self.stepCategoria.value = [[[NSCalendar currentCalendar]
+                                     components:NSCalendarUnitYear fromDate:[NSDate date]]
+                                    year];
+        [self stepCategoriaChanged:nil];
     } else {
         //Leer datos del currentObject
-        self.txtNombre.text      = currentPerfil[@"nombre"];
+        // editando
+        self.txtNombre.text      = currentTeam[@"nombre"];
+        
+        ;
+        /*
+        [maClub indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            PFObject *club = (PFObject) obj;
+            return [[club objectForKey:@"nombre"] isEqualToString:self.
+        }];
+        */
+        NSString *xrama = currentTeam[@"rama"];
+        [self.pvClub selectRow:[maClub indexOfObject:currentTeam[@"club"]] inComponent:0 animated:YES];
+        for (NSInteger i = 0; i< [self.selRama numberOfSegments]; i++) {
+            NSString *titulo = [self.selRama titleForSegmentAtIndex:i];
+            if ( [titulo isEqualToString:xrama]) {
+                [self.selRama setSelectedSegmentIndex:i];
+            }
+        }
+        for (NSInteger i = 0; i< [self.selDivision numberOfSegments]; i++) {
+            if ([[self.selDivision titleForSegmentAtIndex:i] isEqualToString:currentTeam[@"division"]]) {
+                [self.selDivision setSelectedSegmentIndex:i];
+            }
+        }
+        self.txtAnio.text = currentTeam[@"categoria"];
+        //[self.swCategoria setOn:[currentTeam[@"categoria"] rangeOfString:@"-"].location >0];
+        NSRange pos =[currentTeam[@"categoria"] rangeOfString:@"-"];
+        [self.swCategoria setOn: pos.location != NSNotFound ];
+        NSString *valor = [currentTeam[@"categoria"] componentsSeparatedByString:@"-"][0];
+        self.stepCategoria.value = [valor doubleValue];
     }
     
-    
+   /*
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
-    
+    */
     alertError = [[UIAlertView alloc] initWithTitle:@"Corregir"
                                             message:@"Verifique que todos los campos tengan datos"
                                            delegate:self
@@ -93,7 +127,7 @@
 }
 
 // end picker view
-
+/*
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
@@ -111,7 +145,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     return [textField resignFirstResponder];
 }
-
+*/
 
 - (IBAction)btnSavePressed:(id)sender {
     BOOL showAlert = false;
@@ -209,21 +243,16 @@
 }
 
 - (IBAction)swCategoriaChanged:(id)sender {
-    if (self.swCategoria.isOn) {
-        self.txtAnio.text = [NSString stringWithFormat:@"%f-%f", self.stepCategoria.value,self.stepCategoria.value+1];
-    } else {
-        self.txtAnio.text = [NSString stringWithFormat:@"%f", self.stepCategoria.value];
-    }
+    [self stepCategoriaChanged:nil];
 }
 
 - (IBAction)stepCategoriaChanged:(id)sender {
     
     if (self.swCategoria.isOn) {
-        self.txtAnio.text = [NSString stringWithFormat:@"%f-%f", self.stepCategoria.value,self.stepCategoria.value+1];
+        self.txtAnio.text = [NSString stringWithFormat:@"%i-%i", (int)self.stepCategoria.value,(int)self.stepCategoria.value+1];
     } else {
-        self.txtAnio.text = [NSString stringWithFormat:@"%f", self.stepCategoria.value];
+        self.txtAnio.text = [NSString stringWithFormat:@"%i", (int)self.stepCategoria.value];
     }
-    
 }
 
 

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C69A6001AB947A400616096 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C69A5FF1AB947A400616096 /* ParseUI.framework */; };
+		3C7563511ACB3133001EBB8B /* CellTeams.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75634F1ACB3133001EBB8B /* CellTeams.m */; };
+		3C7563521ACB3133001EBB8B /* CellTeams.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563501ACB3133001EBB8B /* CellTeams.xib */; };
+		3C7563561ACB9F63001EBB8B /* CellDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563541ACB9F63001EBB8B /* CellDocument.m */; };
+		3C7563571ACB9F63001EBB8B /* CellDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563551ACB9F63001EBB8B /* CellDocument.xib */; };
 		3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */; };
 		3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */; };
 		3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */; };
@@ -84,6 +88,12 @@
 
 /* Begin PBXFileReference section */
 		3C69A5FF1AB947A400616096 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		3C75634E1ACB3133001EBB8B /* CellTeams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellTeams.h; path = libero/CellTeams.h; sourceTree = "<group>"; };
+		3C75634F1ACB3133001EBB8B /* CellTeams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellTeams.m; path = libero/CellTeams.m; sourceTree = "<group>"; };
+		3C7563501ACB3133001EBB8B /* CellTeams.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellTeams.xib; path = libero/CellTeams.xib; sourceTree = "<group>"; };
+		3C7563531ACB9F63001EBB8B /* CellDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDocument.h; path = libero/CellDocument.h; sourceTree = "<group>"; };
+		3C7563541ACB9F63001EBB8B /* CellDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDocument.m; path = libero/CellDocument.m; sourceTree = "<group>"; };
+		3C7563551ACB9F63001EBB8B /* CellDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellDocument.xib; path = libero/CellDocument.xib; sourceTree = "<group>"; };
 		3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageGalleryIcon.png; sourceTree = "<group>"; };
 		3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo-Video-Slr-camera-icon-150x150.png"; sourceTree = "<group>"; };
 		3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
@@ -240,6 +250,12 @@
 				8457F72C1AC46C1B00DF5615 /* CellClubes.h */,
 				8457F72D1AC46C1B00DF5615 /* CellClubes.m */,
 				8457F72E1AC46C1B00DF5615 /* CellClubes.xib */,
+				3C75634E1ACB3133001EBB8B /* CellTeams.h */,
+				3C75634F1ACB3133001EBB8B /* CellTeams.m */,
+				3C7563501ACB3133001EBB8B /* CellTeams.xib */,
+				3C7563531ACB9F63001EBB8B /* CellDocument.h */,
+				3C7563541ACB9F63001EBB8B /* CellDocument.m */,
+				3C7563551ACB9F63001EBB8B /* CellDocument.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -582,6 +598,7 @@
 				845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */,
 				8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */,
 				84192CF41AB0CA4A0032FD89 /* arrow_left_alt1.png in Resources */,
+				3C7563571ACB9F63001EBB8B /* CellDocument.xib in Resources */,
 				84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */,
 				8457F7301AC46C1B00DF5615 /* CellClubes.xib in Resources */,
 				84192CFA1AB0CFF40032FD89 /* check.png in Resources */,
@@ -592,6 +609,7 @@
 				84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */,
 				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
 				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
+				3C7563521ACB3133001EBB8B /* CellTeams.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +631,7 @@
 				845AC7061AAE2A39009CCE96 /* ConfigurationViewController.m in Sources */,
 				84192D291AB8B9B00032FD89 /* AttendanceViewController.m in Sources */,
 				84192D141AB8B7B70032FD89 /* DocumentListViewController.m in Sources */,
+				3C7563561ACB9F63001EBB8B /* CellDocument.m in Sources */,
 				84192D261AB8B95F0032FD89 /* PlayerEditViewController.m in Sources */,
 				84192D201AB8B9240032FD89 /* HomeViewController.m in Sources */,
 				84192CFF1AB8B4610032FD89 /* ClubListViewController.m in Sources */,
@@ -635,6 +654,7 @@
 				84B0629B1ACA2DAB001484A1 /* TeamTableViewController.m in Sources */,
 				84192D321ABA0A150032FD89 /* ClubListTableViewController.m in Sources */,
 				84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */,
+				3C7563511ACB3133001EBB8B /* CellTeams.m in Sources */,
 				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,
 				3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */,
 				845AC7001AAE2A39009CCE96 /* main.m in Sources */,

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DocumentEditViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtDocumento;
+- (IBAction)btnSavePressed:(id)sender;
+- (IBAction)btnLostFocusPressed:(id)sender;
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/PFQueryTableViewController.h>
 
-@interface TeamTableViewController : UITableViewController
+@interface TeamTableViewController : PFQueryTableViewController
 
 @end
