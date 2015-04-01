@@ -11,8 +11,6 @@
 #import "Globals.h"
 #import "MBProgressHUD.h"
 
-
-UIAlertView *alertError, *alertGuardar;
 PFObject *currentObject;
 
 

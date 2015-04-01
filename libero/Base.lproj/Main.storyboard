@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--User Edit View Controller-->
@@ -352,7 +352,7 @@
         <!--Home View Controller-->
         <scene sceneID="XmH-oK-j08">
             <objects>
-                <viewController storyboardIdentifier="Home" id="iW5-N8-Ji5" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iW5-N8-Ji5" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eh1-V9-5k8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,7 +512,7 @@
         <!--Configuration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="Config" id="vXZ-lx-hvc" customClass="ConfigurationViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ConfigurationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -742,6 +742,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="8Ca-Fv-1Ib" kind="modal" identifier="ToNewClub" id="zUt-iY-OTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYq-sq-9sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -917,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKm-Oc-Hk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1061" y="1673"/>
+            <point key="canvasLocation" x="-1067" y="1653"/>
         </scene>
         <!--Profile Edit View Controller-->
         <scene sceneID="apR-ls-dZw">
@@ -1624,110 +1627,221 @@
                                                 <segue destination="CYK-3d-l3u" kind="custom" customClass="DismissSegue" id="PgW-lP-n4f"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="check.png" id="X5w-22-kFq"/>
+                                        <barButtonItem key="rightBarButtonItem" image="check.png" id="X5w-22-kFq" userLabel="Save">
+                                            <connections>
+                                                <action selector="btnSavePressed:" destination="CYK-3d-l3u" id="tOy-cg-2eK"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4VP-rJ-LNZ">
-                                <rect key="frame" x="16" y="77" width="59" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" id="7Ys-Eb-GLQ">
-                                <rect key="frame" x="0.0" y="144" width="320" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club/Categoría/Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yrQ-jc-7RC">
-                                <rect key="frame" x="16" y="144" width="252" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de Perfil" minimumFontSize="17" id="bCt-qh-hgL">
-                                <rect key="frame" x="83" y="77" width="221" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6pb-Fu-igB">
-                                <rect key="frame" x="83" y="115" width="221" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" minimumFontSize="17" id="u83-8B-kNW">
-                                <rect key="frame" x="16" y="314" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domicilio" minimumFontSize="17" id="2DN-Mz-kzh">
-                                <rect key="frame" x="16" y="352" width="288" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="r53-he-96x">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="oJJ-5m-ecI">
-                                <rect key="frame" x="16" y="390" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="D7c-dj-gxT">
-                                <rect key="frame" x="210" y="465" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" minimumFontSize="17" id="Bj3-Zh-jhg">
-                                <rect key="frame" x="113" y="464" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="QiT-nf-8Su">
-                                <rect key="frame" x="113" y="428" width="191" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="CH"/>
-                                    <segment title="M"/>
-                                    <segment title="G"/>
-                                    <segment title="XG"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgU-92-V4g">
-                                <rect key="frame" x="16" y="428" width="71" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fyp-ue-iQO">
-                                <rect key="frame" x="16" y="465" width="71" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="eyO-7D-iBg">
-                                <rect key="frame" x="210" y="503" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" minimumFontSize="17" id="2WW-YS-CoX">
-                                <rect key="frame" x="113" y="502" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calzado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a56-ln-BA9">
-                                <rect key="frame" x="16" y="503" width="71" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WHf-w3-4bo" userLabel="btnLostFocus">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnLostFocusPressed:" destination="CYK-3d-l3u" eventType="touchUpInside" id="G7T-ey-iQ1"/>
+                                            <action selector="btnLostFocusPressed:" destination="eYp-EN-CfZ" eventType="touchUpInside" id="Upv-7w-JNv"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4VP-rJ-LNZ" userLabel="imgPhoto">
+                                        <rect key="frame" x="20" y="15" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m1h-Ql-rPa" userLabel="btnPhoto">
+                                        <rect key="frame" x="20" y="15" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Foto">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnPhotoPressed:" destination="CYK-3d-l3u" eventType="touchUpInside" id="AVd-Bl-E6j"/>
+                                            <action selector="btnPhotoPressed:" destination="eYp-EN-CfZ" eventType="touchUpInside" id="Hxq-Mk-WYz"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Jugador" minimumFontSize="17" id="bCt-qh-hgL" userLabel="txtNombre">
+                                        <rect key="frame" x="100" y="13" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6pb-Fu-igB" userLabel="lblPerfil">
+                                        <rect key="frame" x="100" y="51" width="200" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club/Equipo/Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yrQ-jc-7RC">
+                                        <rect key="frame" x="20" y="80" width="212" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" id="7Ys-Eb-GLQ" userLabel="pvClubCategoPerfil">
+                                        <rect key="frame" x="20" y="80" width="280" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="CYK-3d-l3u" id="zmW-nO-Re2"/>
+                                            <outlet property="delegate" destination="CYK-3d-l3u" id="Ab3-CK-ObT"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" minimumFontSize="17" id="u83-8B-kNW" userLabel="txtTelefono">
+                                        <rect key="frame" x="20" y="250" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domicilio" minimumFontSize="17" id="2DN-Mz-kzh" userLabel="txtDomicilio">
+                                        <rect key="frame" x="20" y="288" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="oJJ-5m-ecI" userLabel="txtEmail">
+                                        <rect key="frame" x="20" y="326" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgU-92-V4g">
+                                        <rect key="frame" x="20" y="364" width="71" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="QiT-nf-8Su" userLabel="selPlayera">
+                                        <rect key="frame" x="111" y="364" width="189" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="CH"/>
+                                            <segment title="M"/>
+                                            <segment title="G"/>
+                                            <segment title="XG"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fyp-ue-iQO">
+                                        <rect key="frame" x="20" y="401" width="71" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" minimumFontSize="17" id="Bj3-Zh-jhg" userLabel="txtNumero">
+                                        <rect key="frame" x="111" y="400" width="87" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="D7c-dj-gxT" userLabel="stepNumero">
+                                        <rect key="frame" x="206" y="401" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stepNumeroChanged:" destination="CYK-3d-l3u" eventType="valueChanged" id="kzB-qh-7Ru"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calzado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a56-ln-BA9">
+                                        <rect key="frame" x="20" y="439" width="71" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" minimumFontSize="17" id="2WW-YS-CoX" userLabel="txtCalzado">
+                                        <rect key="frame" x="111" y="438" width="87" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="eyO-7D-iBg" userLabel="stepCalzado">
+                                        <rect key="frame" x="206" y="439" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stepCalzadoChanged:" destination="CYK-3d-l3u" eventType="valueChanged" id="uh3-od-4wc"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </scrollView>
+                            <view contentMode="scaleToFill" id="GcP-VC-rHh" userLabel="vwAcquire">
+                                <rect key="frame" x="60" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zMM-sG-dL5" userLabel="btnCloseAcquire">
+                                        <rect key="frame" x="8" y="8" width="190" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnCloseAcquirePressed:" destination="eYp-EN-CfZ" eventType="touchUpInside" id="8gq-F4-eFN"/>
+                                            <action selector="btnCloseAcquirePressed:" destination="CYK-3d-l3u" eventType="touchUpInside" id="MmZ-VD-obX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una fotografía" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iKy-Qd-tcy">
+                                        <rect key="frame" x="8" y="28" width="184" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hJO-ts-nh4" userLabel="btnCamera">
+                                        <rect key="frame" x="17" y="73" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Photo-Video-Slr-camera-icon-150x150.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnCameraPressed:" destination="CYK-3d-l3u" eventType="touchUpInside" id="Ejz-Fc-TCB"/>
+                                            <action selector="btnCameraPressed:" destination="eYp-EN-CfZ" eventType="touchUpInside" id="VAM-tJ-Xe1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bRU-ul-okt" userLabel="btnReel">
+                                        <rect key="frame" x="104" y="73" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="imageGalleryIcon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnReelPressed:" destination="eYp-EN-CfZ" eventType="touchUpInside" id="BUp-GT-yZ3"/>
+                                            <action selector="btnReelPressed:" destination="CYK-3d-l3u" eventType="touchUpInside" id="vsE-IT-1qO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnPhoto" destination="m1h-Ql-rPa" id="Zag-ux-U5Q"/>
+                        <outlet property="imgPhoto" destination="4VP-rJ-LNZ" id="y0d-UG-P80"/>
+                        <outlet property="lblPerfil" destination="6pb-Fu-igB" id="SdJ-cT-mlj"/>
+                        <outlet property="pvClubCategoPerfil" destination="7Ys-Eb-GLQ" id="HxF-0j-RtZ"/>
+                        <outlet property="scrollView" destination="r53-he-96x" id="mpp-aC-WnJ"/>
+                        <outlet property="selPlayera" destination="QiT-nf-8Su" id="HWM-e9-c3z"/>
+                        <outlet property="stepCalzado" destination="eyO-7D-iBg" id="Gnv-kk-89k"/>
+                        <outlet property="stepNumero" destination="D7c-dj-gxT" id="kbe-8i-bNh"/>
+                        <outlet property="txtCalzado" destination="2WW-YS-CoX" id="J0R-3t-9b4"/>
+                        <outlet property="txtDomicilio" destination="2DN-Mz-kzh" id="4vN-0M-7hc"/>
+                        <outlet property="txtEmail" destination="oJJ-5m-ecI" id="Kck-jV-XOE"/>
+                        <outlet property="txtNombre" destination="bCt-qh-hgL" id="WqX-2v-GRV"/>
+                        <outlet property="txtNumero" destination="Bj3-Zh-jhg" id="HA4-KD-3u5"/>
+                        <outlet property="txtTelefono" destination="u83-8B-kNW" id="zoR-oh-nmM"/>
+                        <outlet property="vwAcquire" destination="GcP-VC-rHh" id="ILm-lU-Mt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8c-zq-Y7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2066,26 +2180,27 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eAc-8N-IGZ"/>
         <segue reference="PNm-uJ-KtF"/>
-        <segue reference="0jb-Wr-tNt"/>
         <segue reference="O54-mA-oya"/>
-        <segue reference="BHq-t8-sdt"/>
+        <segue reference="oIX-F3-W8T"/>
         <segue reference="ALE-37-C0e"/>
         <segue reference="vLW-UC-ThL"/>
-        <segue reference="oIX-F3-W8T"/>
-        <segue reference="W2V-p1-bkP"/>
-        <segue reference="hrt-N9-7OW"/>
+        <segue reference="BHq-t8-sdt"/>
+        <segue reference="0jb-Wr-tNt"/>
+        <segue reference="zUt-iY-OTX"/>
+        <segue reference="mRe-op-Jd1"/>
+        <segue reference="VmK-ew-w6f"/>
         <segue reference="2mb-lW-eYQ"/>
-        <segue reference="bfN-Ui-awU"/>
-        <segue reference="emp-eR-Kbe"/>
-        <segue reference="1uo-iM-eWj"/>
+        <segue reference="hrt-N9-7OW"/>
+        <segue reference="C29-2G-W4z"/>
         <segue reference="qfe-21-Qh7"/>
         <segue reference="6py-nr-lnV"/>
         <segue reference="aAQ-la-20l"/>
-        <segue reference="C29-2G-W4z"/>
+        <segue reference="emp-eR-Kbe"/>
+        <segue reference="eAc-8N-IGZ"/>
+        <segue reference="1uo-iM-eWj"/>
         <segue reference="w8g-hl-lu3"/>
+        <segue reference="Ar5-bk-e2f"/>
         <segue reference="Yc4-jT-TfZ"/>
-        <segue reference="mRe-op-Jd1"/>
     </inferredMetricsTieBreakers>
 </document>
