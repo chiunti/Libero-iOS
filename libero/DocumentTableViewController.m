@@ -30,7 +30,7 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    currentDocument= nil;
+    currentDocument= nil; 
 }
 
 - (void)didReceiveMemoryWarning {
