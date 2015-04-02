@@ -31,7 +31,7 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    currentClub = nil;
+    currentPerfil = nil;
 }
 
 

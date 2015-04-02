@@ -12,6 +12,8 @@
 #import "MBProgressHUD.h"
 
 PFQuery *query;
+//UIView *backgroundView;
+UIButton *backgroundView;
 
 @interface PlayerEditViewController ()
 {
@@ -27,6 +29,18 @@ PFQuery *query;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initController];
+    
+    //self.vwAcquire.hidden = true;
+    [self.vwAcquire removeFromSuperview];
+    self.vwAcquire.frame = CGRectMake((self.view.frame.size.width-200)/2, -200, 200 , 200);
+
+    if (backgroundView == nil)
+        backgroundView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    backgroundView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:.5f];
+    [backgroundView addTarget:self
+               action:@selector(btnCloseAcquirePressed:)
+     forControlEvents:UIControlEventTouchUpInside];
+    self.vwAcquire.layer.cornerRadius = 8;
 
 }
 
@@ -79,7 +93,7 @@ PFQuery *query;
         self.imgPhoto.image = [UIImage imageWithData:[img getData]];
     }
     
-    self.vwAcquire.hidden = true;
+    //self.vwAcquire.hidden = true;
     
     
     CGImageRef cgref = [self.imgPhoto.image CGImage];
@@ -153,17 +167,15 @@ PFQuery *query;
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 3;
+    return 2;
 }
 
 // The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     if (component == 0) {
-        return maClub.count;
-    } else if (component == 1){
         return maEquipo.count;
-    } else if (component == 2){
+    } else if (component == 1){
         return maPerfil.count;
     } else {
         return 0;
@@ -174,10 +186,10 @@ PFQuery *query;
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (component == 0) {
-        return [maClub[row] objectForKey:@"nombre"];
+        PFObject *club = [maEquipo[row] objectForKey:@"club"];
+        [club fetch];
+        return  [NSString stringWithFormat:@"%@ - %@", [club objectForKey:@"nombre"], [maEquipo[row] objectForKey:@"nombre"]];
     } else if (component == 1){
-        return [maEquipo[row] objectForKey:@"nombre"];
-    } else if (component == 2){
         return [maPerfil[row] objectForKey:@"nombre"];
     } else {
         return @"";
@@ -185,9 +197,32 @@ PFQuery *query;
     
 }
 
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+    UILabel *label = [[UILabel alloc] init];
+    //label.backgroundColor = [UIColor lightGrayColor];
+    //label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"System" size:14];
+    //label.text = [NSString stringWithFormat:@"  %d", (int)row+1];
+    if (component == 0) {
+        PFObject *club = [maEquipo[row] objectForKey:@"club"];
+        [club fetch];
+        label.text = [NSString stringWithFormat:@"%@ - %@", [club objectForKey:@"nombre"], [maEquipo[row] objectForKey:@"nombre"]];
+    } else if (component == 1){
+        label.text = [maPerfil[row] objectForKey:@"nombre"];
+    } else {
+        label.text = @"";
+    }
+
+    return label;
+}
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    
+    if (component==1){
+        self.lblPerfil.text = [maPerfil[row] objectForKey:@"nombre"];
+    }
 }
 
 // end picker view
@@ -308,11 +343,37 @@ PFQuery *query;
 
 
 - (IBAction)btnPhotoPressed:(id)sender {
-    self.vwAcquire.hidden = NO;
+    
+    //self.vwAcquire.hidden = NO;
+
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.vwAcquire.frame = CGRectMake((self.view.frame.size.width-200)/2, 20, 200, 200);
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    [self.view addSubview:backgroundView];
+    [self.view addSubview:self.vwAcquire];
+    
+    
 }
 
 - (IBAction)btnCloseAcquirePressed:(id)sender {
-    self.vwAcquire.hidden = YES;
+    //self.vwAcquire.hidden = YES;
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.vwAcquire.frame = CGRectMake((self.view.frame.size.width-200)/2, -200, 200 , 200);
+                     }
+                     completion:^(BOOL finished){
+                         if (finished){
+                             [self.vwAcquire removeFromSuperview];
+                             [backgroundView removeFromSuperview];
+                         }
+                     }];
 }
 
 - (IBAction)btnLostFocusPressed:(id)sender {
