@@ -12,6 +12,14 @@
 		3C7563521ACB3133001EBB8B /* CellTeams.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563501ACB3133001EBB8B /* CellTeams.xib */; };
 		3C7563561ACB9F63001EBB8B /* CellDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563541ACB9F63001EBB8B /* CellDocument.m */; };
 		3C7563571ACB9F63001EBB8B /* CellDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563551ACB9F63001EBB8B /* CellDocument.xib */; };
+		3C75635B1ACDDD0C001EBB8B /* CellPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563591ACDDD0C001EBB8B /* CellPlayers.m */; };
+		3C75635C1ACDDD0C001EBB8B /* CellPlayers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75635A1ACDDD0C001EBB8B /* CellPlayers.xib */; };
+		3C75635F1ACDE86D001EBB8B /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75635E1ACDE86D001EBB8B /* PlayerTableViewController.m */; };
+		3C7563631ACE4A0D001EBB8B /* CellAsistencia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563611ACE4A0D001EBB8B /* CellAsistencia.m */; };
+		3C7563641ACE4A0D001EBB8B /* CellAsistencia.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563621ACE4A0D001EBB8B /* CellAsistencia.xib */; };
+		3C7563671ACE648F001EBB8B /* PlayerDocTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563661ACE648F001EBB8B /* PlayerDocTVC.m */; };
+		3C75636A1ACE6611001EBB8B /* DocPlayerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563691ACE6611001EBB8B /* DocPlayerTVC.m */; };
+		3C75636D1ACE9B4A001EBB8B /* PlayerAtteTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */; };
 		3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */; };
 		3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */; };
 		3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */; };
@@ -94,6 +102,20 @@
 		3C7563531ACB9F63001EBB8B /* CellDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDocument.h; path = libero/CellDocument.h; sourceTree = "<group>"; };
 		3C7563541ACB9F63001EBB8B /* CellDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDocument.m; path = libero/CellDocument.m; sourceTree = "<group>"; };
 		3C7563551ACB9F63001EBB8B /* CellDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellDocument.xib; path = libero/CellDocument.xib; sourceTree = "<group>"; };
+		3C7563581ACDDD0C001EBB8B /* CellPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellPlayers.h; path = libero/CellPlayers.h; sourceTree = "<group>"; };
+		3C7563591ACDDD0C001EBB8B /* CellPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellPlayers.m; path = libero/CellPlayers.m; sourceTree = "<group>"; };
+		3C75635A1ACDDD0C001EBB8B /* CellPlayers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellPlayers.xib; path = libero/CellPlayers.xib; sourceTree = "<group>"; };
+		3C75635D1ACDE86D001EBB8B /* PlayerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewController.h; sourceTree = "<group>"; };
+		3C75635E1ACDE86D001EBB8B /* PlayerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewController.m; sourceTree = "<group>"; };
+		3C7563601ACE4A0D001EBB8B /* CellAsistencia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellAsistencia.h; path = libero/CellAsistencia.h; sourceTree = "<group>"; };
+		3C7563611ACE4A0D001EBB8B /* CellAsistencia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellAsistencia.m; path = libero/CellAsistencia.m; sourceTree = "<group>"; };
+		3C7563621ACE4A0D001EBB8B /* CellAsistencia.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellAsistencia.xib; path = libero/CellAsistencia.xib; sourceTree = "<group>"; };
+		3C7563651ACE648F001EBB8B /* PlayerDocTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDocTVC.h; sourceTree = "<group>"; };
+		3C7563661ACE648F001EBB8B /* PlayerDocTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDocTVC.m; sourceTree = "<group>"; };
+		3C7563681ACE6611001EBB8B /* DocPlayerTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocPlayerTVC.h; sourceTree = "<group>"; };
+		3C7563691ACE6611001EBB8B /* DocPlayerTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocPlayerTVC.m; sourceTree = "<group>"; };
+		3C75636B1ACE9B4A001EBB8B /* PlayerAtteTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAtteTVC.h; sourceTree = "<group>"; };
+		3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAtteTVC.m; sourceTree = "<group>"; };
 		3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageGalleryIcon.png; sourceTree = "<group>"; };
 		3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo-Video-Slr-camera-icon-150x150.png"; sourceTree = "<group>"; };
 		3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
@@ -256,6 +278,12 @@
 				3C7563531ACB9F63001EBB8B /* CellDocument.h */,
 				3C7563541ACB9F63001EBB8B /* CellDocument.m */,
 				3C7563551ACB9F63001EBB8B /* CellDocument.xib */,
+				3C7563581ACDDD0C001EBB8B /* CellPlayers.h */,
+				3C7563591ACDDD0C001EBB8B /* CellPlayers.m */,
+				3C75635A1ACDDD0C001EBB8B /* CellPlayers.xib */,
+				3C7563601ACE4A0D001EBB8B /* CellAsistencia.h */,
+				3C7563611ACE4A0D001EBB8B /* CellAsistencia.m */,
+				3C7563621ACE4A0D001EBB8B /* CellAsistencia.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -475,6 +503,8 @@
 				84192D131AB8B7B70032FD89 /* DocumentListViewController.m */,
 				84B0629C1ACA300A001484A1 /* DocumentTableViewController.h */,
 				84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */,
+				3C7563681ACE6611001EBB8B /* DocPlayerTVC.h */,
+				3C7563691ACE6611001EBB8B /* DocPlayerTVC.m */,
 			);
 			name = Documents;
 			sourceTree = "<group>";
@@ -495,6 +525,12 @@
 				84192D251AB8B95F0032FD89 /* PlayerEditViewController.m */,
 				84192D211AB8B9420032FD89 /* PlayerListViewController.h */,
 				84192D221AB8B9420032FD89 /* PlayerListViewController.m */,
+				3C75635D1ACDE86D001EBB8B /* PlayerTableViewController.h */,
+				3C75635E1ACDE86D001EBB8B /* PlayerTableViewController.m */,
+				3C7563651ACE648F001EBB8B /* PlayerDocTVC.h */,
+				3C7563661ACE648F001EBB8B /* PlayerDocTVC.m */,
+				3C75636B1ACE9B4A001EBB8B /* PlayerAtteTVC.h */,
+				3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -602,10 +638,12 @@
 				84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */,
 				8457F7301AC46C1B00DF5615 /* CellClubes.xib in Resources */,
 				84192CFA1AB0CFF40032FD89 /* check.png in Resources */,
+				3C75635C1ACDDD0C001EBB8B /* CellPlayers.xib in Resources */,
 				3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */,
 				84192CF61AB0CAB00032FD89 /* inWV5.png in Resources */,
 				845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */,
 				849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */,
+				3C7563641ACE4A0D001EBB8B /* CellAsistencia.xib in Resources */,
 				84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */,
 				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
 				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
@@ -634,6 +672,7 @@
 				3C7563561ACB9F63001EBB8B /* CellDocument.m in Sources */,
 				84192D261AB8B95F0032FD89 /* PlayerEditViewController.m in Sources */,
 				84192D201AB8B9240032FD89 /* HomeViewController.m in Sources */,
+				3C7563671ACE648F001EBB8B /* PlayerDocTVC.m in Sources */,
 				84192CFF1AB8B4610032FD89 /* ClubListViewController.m in Sources */,
 				84192D111AB8B6BC0032FD89 /* TeamEditViewController.m in Sources */,
 				84192D2F1AB8BA900032FD89 /* FeeNewViewController.m in Sources */,
@@ -643,10 +682,13 @@
 				845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */,
 				84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */,
 				84192D0E1AB8B69E0032FD89 /* TeamListViewController.m in Sources */,
+				3C75635F1ACDE86D001EBB8B /* PlayerTableViewController.m in Sources */,
 				84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */,
 				84192D021AB8B5430032FD89 /* ClubNewViewController.m in Sources */,
 				84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */,
 				84B0629E1ACA300A001484A1 /* DocumentTableViewController.m in Sources */,
+				3C75636D1ACE9B4A001EBB8B /* PlayerAtteTVC.m in Sources */,
+				3C75635B1ACDDD0C001EBB8B /* CellPlayers.m in Sources */,
 				84192D051AB8B60E0032FD89 /* ClubJoinViewController.m in Sources */,
 				8457F72F1AC46C1B00DF5615 /* CellClubes.m in Sources */,
 				849571711AAFE3DD00309962 /* DismissSegue.m in Sources */,
@@ -657,7 +699,9 @@
 				3C7563511ACB3133001EBB8B /* CellTeams.m in Sources */,
 				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,
 				3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */,
+				3C75636A1ACE6611001EBB8B /* DocPlayerTVC.m in Sources */,
 				845AC7001AAE2A39009CCE96 /* main.m in Sources */,
+				3C7563631ACE4A0D001EBB8B /* CellAsistencia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

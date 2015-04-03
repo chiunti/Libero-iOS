@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AttendanceViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIDatePicker *dpFecha;
+- (IBAction)dpFechaChanged:(id)sender;
 
 @end

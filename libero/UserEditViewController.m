@@ -11,7 +11,7 @@
 #import "Globals.h"
 #import "MBProgressHUD.h"
 
-PFObject *currentObject;
+//PFObject *currentObject;
 
 
 @interface UserEditViewController ()
@@ -41,21 +41,21 @@ PFObject *currentObject;
     [query whereKey:@"fbId" equalTo:fbUser.objectID];
     NSArray *arreglo = [query findObjects];
     if (arreglo.count == 0 ){
-        currentObject = [PFObject objectWithClassName:@"usuario"];
+        currentUser = [PFObject objectWithClassName:@"usuario"];
         self.txtNombre.text      = fbUser.first_name;
         self.txtApellidoPat.text = fbUser.middle_name;;
         self.txtApellidoMat.text = fbUser.last_name;
         self.txtEmail.text       = [fbUser objectForKey:@"email"];
         self.imgPhoto.image      = fbProfilePicture;
     } else {
-        currentObject = [arreglo objectAtIndex:0];
+        currentUser = [arreglo objectAtIndex:0];
         //Leer datos del currentObject
-        self.txtNombre.text      = currentObject[@"nombre"];
-        self.txtApellidoPat.text = currentObject[@"apellidopat"];
-        self.txtApellidoMat.text = currentObject[@"apellidomat"];
-        self.txtTelefono.text    = currentObject[@"telefono"];
-        self.txtEmail.text       = currentObject[@"email"];
-        PFFile *img = currentObject[@"imagen"];
+        self.txtNombre.text      = currentUser[@"nombre"];
+        self.txtApellidoPat.text = currentUser[@"apellidopat"];
+        self.txtApellidoMat.text = currentUser[@"apellidomat"];
+        self.txtTelefono.text    = currentUser[@"telefono"];
+        self.txtEmail.text       = currentUser[@"email"];
+        PFFile *img = currentUser[@"imagen"];
         self.imgPhoto.image = [UIImage imageWithData:[img getData]];
     }
     
@@ -158,20 +158,20 @@ PFObject *currentObject;
     }
     
     
-    currentObject[@"nombre"] = self.txtNombre.text;
-    currentObject[@"apellidopat"] = self.txtApellidoPat.text;
-    currentObject[@"apellidomat"] = self.txtApellidoMat.text;
-    currentObject[@"telefono"] = self.txtTelefono.text;
-    currentObject[@"email"] = self.txtEmail.text;
-    currentObject[@"fbId"] = fbUser.objectID;
+    currentUser[@"nombre"] = self.txtNombre.text;
+    currentUser[@"apellidopat"] = self.txtApellidoPat.text;
+    currentUser[@"apellidomat"] = self.txtApellidoMat.text;
+    currentUser[@"telefono"] = self.txtTelefono.text;
+    currentUser[@"email"] = self.txtEmail.text;
+    currentUser[@"fbId"] = fbUser.objectID;
 
     
     NSData *imageData = UIImageJPEGRepresentation(self.imgPhoto.image, 0.8);
     PFFile *imageFile = [PFFile fileWithName:@"avatar.png" data:imageData];
     
-    currentObject[@"imagen"] = imageFile;
+    currentUser[@"imagen"] = imageFile;
     
-    [self saveDataWithObject:currentObject];
+    [self saveDataWithObject:currentUser];
 }
 
 

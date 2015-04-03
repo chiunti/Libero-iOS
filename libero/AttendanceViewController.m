@@ -7,6 +7,7 @@
 //
 
 #import "AttendanceViewController.h"
+#import "Globals.h"
 
 @interface AttendanceViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.dpFecha.datePickerMode = UIDatePickerModeDate;
+    currentFecha = [self.dpFecha date];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +38,10 @@
 }
 */
 
+- (IBAction)dpFechaChanged:(id)sender {
+    
+    currentFecha = [self.dpFecha date];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewDate" object:self];
+
+}
 @end

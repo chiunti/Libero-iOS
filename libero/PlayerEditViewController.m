@@ -12,37 +12,27 @@
 #import "MBProgressHUD.h"
 
 PFQuery *query;
-//UIView *backgroundView;
 UIButton *backgroundView;
+NSMutableArray *maClub;
+NSMutableArray *maEquipo;
+NSMutableArray *maPerfil;
 
 @interface PlayerEditViewController ()
-{
-    NSMutableArray *maClub;
-    NSMutableArray *maEquipo;
-    NSMutableArray *maPerfil;
-}
+
 @end
 
 @implementation PlayerEditViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    
     [self initController];
     
-    //self.vwAcquire.hidden = true;
-    [self.vwAcquire removeFromSuperview];
-    self.vwAcquire.frame = CGRectMake((self.view.frame.size.width-200)/2, -200, 200 , 200);
-
-    if (backgroundView == nil)
-        backgroundView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    backgroundView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:.5f];
-    [backgroundView addTarget:self
-               action:@selector(btnCloseAcquirePressed:)
-     forControlEvents:UIControlEventTouchUpInside];
-    self.vwAcquire.layer.cornerRadius = 8;
-
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -52,10 +42,6 @@ UIButton *backgroundView;
 -(void)initController
 {
     
-    //PFQuery *query = [PFQuery queryWithClassName:@"jugador"];
-    //[query fromLocalDatastore];
-    //[query whereKey:@"fbId" equalTo:fbUser.objectID];
-    //NSArray *arreglo = [query findObjects];
     query = [PFQuery queryWithClassName:@"club"];
     [query whereKey:@"fbId" equalTo:fbUser.objectID];
     maClub = [NSMutableArray arrayWithArray:[query findObjects]];
@@ -86,14 +72,48 @@ UIButton *backgroundView;
         self.txtNombre.text      = currentPlayer[@"nombre"];
         self.txtTelefono.text    = currentPlayer[@"telefono"];
         self.txtEmail.text       = currentPlayer[@"email"];
-        self.txtCalzado.text       = currentPlayer[@"calzado"];
-        self.txtDomicilio.text       = currentPlayer[@"domicilio"];
-        self.txtNumero.text       = currentPlayer[@"numero"];
+        self.txtCalzado.text     = currentPlayer[@"calzado"];
+        self.txtDomicilio.text   = currentPlayer[@"domicilio"];
+        self.txtNumero.text      = currentPlayer[@"numero"];
+        
+        for (NSInteger i = 0; i< [self.selPlayera numberOfSegments]; i++) {
+            if ([[self.selPlayera titleForSegmentAtIndex:i] isEqualToString:currentPlayer[@"playera"]]) {
+                [self.selPlayera setSelectedSegmentIndex:i];
+            }
+        }
+        
+        [self.pvClubCategoPerfil selectRow:[maEquipo indexOfObject:currentPlayer[@"equipo"]] inComponent:0 animated:NO];
+
+        [self.pvClubCategoPerfil selectRow:[maPerfil indexOfObject:currentPlayer[@"perfil"]] inComponent:1 animated:NO];
+        
+        self.stepNumero.value = [self.txtNumero.text doubleValue];
+        self.stepCalzado.value = [self.txtCalzado.text doubleValue];
+        
+
         PFFile *img = currentPlayer[@"imagen"];
         self.imgPhoto.image = [UIImage imageWithData:[img getData]];
     }
+    self.lblPerfil.text = [maPerfil[0] objectForKey:@"nombre"];
+
     
-    //self.vwAcquire.hidden = true;
+    
+    // config view for photo
+    [self.vwAcquire removeFromSuperview];
+    self.vwAcquire.frame = CGRectMake((self.view.frame.size.width-200)/2, -200, 200 , 200);
+    
+    if (backgroundView == nil)
+    {
+        backgroundView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0,
+                          [UIScreen mainScreen].bounds.size.width,
+                          [UIScreen mainScreen].bounds.size.height)
+                          ];
+    }
+    backgroundView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:.5f];
+    [backgroundView addTarget:self
+                       action:@selector(btnCloseAcquirePressed:)
+             forControlEvents:UIControlEventTouchUpInside];
+    self.vwAcquire.layer.cornerRadius = 8;
+
     
     
     CGImageRef cgref = [self.imgPhoto.image CGImage];
@@ -111,8 +131,8 @@ UIButton *backgroundView;
     
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
     
     alertError = [[UIAlertView alloc] initWithTitle:@"Corregir"
                                             message:@"Verifique que todos los campos tengan datos"
@@ -209,12 +229,14 @@ UIButton *backgroundView;
         PFObject *club = [maEquipo[row] objectForKey:@"club"];
         [club fetch];
         label.text = [NSString stringWithFormat:@"%@ - %@", [club objectForKey:@"nombre"], [maEquipo[row] objectForKey:@"nombre"]];
+        label.textAlignment = NSTextAlignmentLeft;
     } else if (component == 1){
         label.text = [maPerfil[row] objectForKey:@"nombre"];
+        label.textAlignment = NSTextAlignmentRight;
     } else {
         label.text = @"";
     }
-
+    label.adjustsFontSizeToFitWidth = YES;
     return label;
 }
 
@@ -258,6 +280,16 @@ UIButton *backgroundView;
     
     
     currentPlayer[@"nombre"] = self.txtNombre.text;
+    currentPlayer[@"telefono"] = self.txtTelefono.text;
+    currentPlayer[@"domicilio"] = self.txtDomicilio.text;
+    currentPlayer[@"email"] = self.txtEmail.text;
+    currentPlayer[@"playera"] = [self.selPlayera titleForSegmentAtIndex:self.selPlayera.selectedSegmentIndex];
+    currentPlayer[@"numero"] = self.txtNumero.text;
+    currentPlayer[@"calzado"] = self.txtCalzado.text;
+    currentPlayer[@"equipo"] = maEquipo [[self.pvClubCategoPerfil  selectedRowInComponent:0]];
+    currentPlayer[@"perfil"] = maPerfil [[self.pvClubCategoPerfil  selectedRowInComponent:1]];
+    
+    
     
     currentPlayer[@"fbId"] = fbUser.objectID;
     
@@ -331,10 +363,13 @@ UIButton *backgroundView;
     
     self.imgPhoto.image = chosenImage;
     [self.btnPhoto setTitle: @"" forState:UIControlStateNormal];
-    self.vwAcquire.hidden = YES;
+    //self.vwAcquire.hidden = YES;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     //[self dismissViewControllerAnimated:YES completion:nil];
+    //[self btnCloseAcquirePressed:self];
+    [self.vwAcquire removeFromSuperview];
+    [backgroundView removeFromSuperview];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

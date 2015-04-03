@@ -11,5 +11,6 @@
 @interface CellDocument : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIView *vCell;
 @property (strong, nonatomic) IBOutlet UILabel *lblDocument;
+@property (strong, nonatomic) IBOutlet UISwitch *sw;
 
 @end
