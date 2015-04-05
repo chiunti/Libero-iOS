@@ -8,6 +8,7 @@
 
 #import "AttendanceViewController.h"
 #import "Globals.h"
+#import "CLWeeklyCalendarView.h"
 
 @interface AttendanceViewController ()
 
@@ -16,16 +17,30 @@
 @implementation AttendanceViewController
 
 - (void)viewDidLoad {
+    UIImage *background = [UIImage imageNamed: @"vb3.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+    [self.view insertSubview: imageView atIndex:0];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.dpFecha.datePickerMode = UIDatePickerModeDate;
-    currentFecha = [self.dpFecha date];
-
+    
+    [self.view addSubview:self.calendarView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(CLWeeklyCalendarView *)calendarView
+{
+    if(!_calendarView){
+        _calendarView = [[CLWeeklyCalendarView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 120)];
+        _calendarView.delegate = self;
+    }
+    return _calendarView;
 }
 
 /*
@@ -38,10 +53,27 @@
 }
 */
 
-- (IBAction)dpFechaChanged:(id)sender {
+
+#pragma mark - CLWeeklyCalendarViewDelegate
+-(NSDictionary *)CLCalendarBehaviorAttributes
+{
+    return @{
+             CLCalendarWeekStartDay : @1,                 //Start Day of the week, from 1-7 Mon-Sun -- default 1
+             //             CLCalendarDayTitleTextColor : [UIColor yellowColor],
+             //             CLCalendarSelectedDatePrintColor : [UIColor greenColor],
+             };
+}
+
+
+
+-(void)dailyCalendarViewDidSelect:(NSDate *)date
+{
+    //You can do any logic after the view select the date
     
-    currentFecha = [self.dpFecha date];
+    currentFecha = date;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"NewDate" object:self];
 
 }
+
+
 @end

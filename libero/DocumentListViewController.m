@@ -15,6 +15,11 @@
 @implementation DocumentListViewController
 
 - (void)viewDidLoad {
+    UIImage *background = [UIImage imageNamed: @"vb2_blur.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+    [self.view insertSubview: imageView atIndex:0];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

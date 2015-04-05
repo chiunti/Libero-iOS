@@ -46,7 +46,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgPhoto" destination="hiZ-wa-gUL" id="qo3-4l-cZ5"/>
                 <outlet property="lblEquipo" destination="ZL0-pn-jEZ" id="FkH-Dn-llx"/>

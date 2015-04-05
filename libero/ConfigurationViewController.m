@@ -67,6 +67,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     self.nameLabel.text = user.name;
     
     
+    if (firstrunning){
+        [self performSegueWithIdentifier:@"InitToHome" sender:self];
+    }
+    
     
 }
 

@@ -316,7 +316,7 @@
                                     <segue destination="O4y-OZ-d6B" kind="modal" id="vLW-UC-ThL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zTE-ti-n8x">
+                            <button hidden="YES" opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zTE-ti-n8x">
                                 <rect key="frame" x="16" y="505" width="288" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
@@ -374,8 +374,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleAspectFit" id="4Zo-Hz-2W1" customClass="FBProfilePictureView">
+                                <rect key="frame" x="16" y="22" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wpy-PM-ldz">
-                                <rect key="frame" x="16" y="93" width="288" height="40"/>
+                                <rect key="frame" x="16" y="80" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -393,7 +402,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="byc-k1-Efd">
-                                <rect key="frame" x="16" y="157" width="288" height="40"/>
+                                <rect key="frame" x="16" y="146" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -410,8 +419,26 @@
                                     <segue destination="SEE-gv-ifd" kind="modal" id="qfe-21-Qh7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="avL-mC-o6S">
-                                <rect key="frame" x="16" y="221" width="288" height="40"/>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zwI-z1-j0p">
+                                <rect key="frame" x="16" y="212" width="288" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Cuotas">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JLf-Iw-Seo" kind="modal" id="emp-eR-Kbe"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="avL-mC-o6S">
+                                <rect key="frame" x="16" y="344" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -428,8 +455,8 @@
                                     <segue destination="aFr-1x-8Rd" kind="modal" id="C29-2G-W4z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dWQ-ev-EIy">
-                                <rect key="frame" x="16" y="285" width="288" height="40"/>
+                            <button hidden="YES" opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dWQ-ev-EIy">
+                                <rect key="frame" x="16" y="410" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -446,8 +473,8 @@
                                     <segue destination="8UL-Ye-5er" kind="modal" id="6py-nr-lnV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NwL-TL-dz6">
-                                <rect key="frame" x="16" y="349" width="288" height="40"/>
+                            <button hidden="YES" opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NwL-TL-dz6">
+                                <rect key="frame" x="16" y="476" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -465,7 +492,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bif-fE-H5I">
-                                <rect key="frame" x="16" y="414" width="288" height="40"/>
+                                <rect key="frame" x="16" y="278" width="288" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -482,32 +509,16 @@
                                     <segue destination="aGl-CH-j3s" kind="modal" id="eAc-8N-IGZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zwI-z1-j0p">
-                                <rect key="frame" x="16" y="477" width="288" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.23921570180000001" green="0.34509804840000002" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Cuotas">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="JLf-Iw-Seo" kind="modal" id="emp-eR-Kbe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H0e-dX-grP"/>
+                    <connections>
+                        <outlet property="profilePictureView" destination="4Zo-Hz-2W1" id="5ps-Ic-eZF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhZ-a4-NTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-1436"/>
+            <point key="canvasLocation" x="1336" y="-1435"/>
         </scene>
         <!--Configuration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -619,6 +630,7 @@
                         <outlet property="nameLabel" destination="LzN-We-HdM" id="UX2-If-Kla"/>
                         <outlet property="profilePictureView" destination="XQb-hi-n9C" id="Vvj-jm-PwK"/>
                         <outlet property="statusLabel" destination="M3q-f1-nBd" id="sAm-27-hGr"/>
+                        <segue destination="iW5-N8-Ji5" kind="modal" identifier="InitToHome" animates="NO" id="OoS-ca-LpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -674,7 +686,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ocm-Ly-dfi">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="MIY-2U-DWN" id="Pu0-h6-T6d"/>
@@ -684,7 +696,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPb-pF-Drg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="916"/>
+            <point key="canvasLocation" x="-728" y="916"/>
         </scene>
         <!--Team Table View Controller-->
         <scene sceneID="B9e-aU-Y5H">
@@ -693,7 +705,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QaY-cH-x3z">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="mJz-G2-p3c" id="TLa-Hd-VIi"/>
@@ -703,7 +715,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T60-8A-hpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="916"/>
+            <point key="canvasLocation" x="-351" y="916"/>
         </scene>
         <!--Club List View Controller-->
         <scene sceneID="UEU-J5-pRZ">
@@ -757,7 +769,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dAR-0A-ucS">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="Y2z-KP-2Rh" id="wY8-8E-aOD"/>
                             <outlet property="delegate" destination="Y2z-KP-2Rh" id="frt-RX-TIY"/>
@@ -766,7 +778,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1L4-Mv-Ooq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="916"/>
+            <point key="canvasLocation" x="35" y="916"/>
         </scene>
         <!--Document List View Controller-->
         <scene sceneID="LvY-HK-1nF">
@@ -847,7 +859,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="Shr-Mt-WrY">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="apQ-lk-pxB" id="VLT-3N-0oa"/>
@@ -857,7 +869,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpV-Ew-I7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1061" y="916"/>
+            <point key="canvasLocation" x="-1098" y="916"/>
         </scene>
         <!--Club Add View Controller-->
         <scene sceneID="r9D-BK-u9R">
@@ -1568,7 +1580,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WwW-L2-4lM">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="j6A-kD-wEL" id="G5G-yk-Taz"/>
                             <outlet property="delegate" destination="j6A-kD-wEL" id="fwJ-de-fyo"/>
@@ -1608,6 +1622,7 @@
                             <containerView opaque="NO" contentMode="scaleAspectFill" id="x38-qr-t26">
                                 <rect key="frame" x="20" y="65" width="280" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <connections>
                                     <segue destination="j6A-kD-wEL" kind="embed" id="KHu-eB-1bX"/>
@@ -1864,9 +1879,10 @@
             <objects>
                 <tableViewController id="iix-b7-FhR" customClass="PlayerAtteTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9Gc-L2-LZk">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="343"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="iix-b7-FhR" id="bVW-Vx-r9L"/>
                             <outlet property="delegate" destination="iix-b7-FhR" id="0Ta-q6-fYs"/>
@@ -1898,20 +1914,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="PIY-Ag-KLF" userLabel="dpFecha">
-                                <rect key="frame" x="0.0" y="64" width="320" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="447784768.0557">
-                                    <!--2015-03-11 16:39:28 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="es_MX"/>
-                                <connections>
-                                    <action selector="dpFechaChanged:" destination="SEE-gv-ifd" eventType="valueChanged" id="1wj-rc-RfR"/>
-                                </connections>
-                            </datePicker>
                             <containerView opaque="NO" contentMode="scaleAspectFill" id="slI-FZ-L9R">
-                                <rect key="frame" x="20" y="225" width="280" height="343"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <rect key="frame" x="20" y="192" width="280" height="376"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <connections>
                                     <segue destination="iix-b7-FhR" kind="embed" id="LUK-ay-Rjb"/>
@@ -1920,9 +1925,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="dpFecha" destination="PIY-Ag-KLF" id="U5t-Oz-2Oo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4f-9T-NcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1935,7 +1937,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UBk-aY-LSZ">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="268"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="PDj-TT-J0s" id="cho-M7-Fci"/>
                             <outlet property="delegate" destination="PDj-TT-J0s" id="8xg-L1-trw"/>
@@ -1953,7 +1956,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OeW-Dm-ALb">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="236"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="nCa-Tp-eSR" id="fMN-ba-pby"/>
                             <outlet property="delegate" destination="nCa-Tp-eSR" id="F7S-0t-Rzb"/>
@@ -1964,10 +1967,28 @@
             </objects>
             <point key="canvasLocation" x="1966" y="-440.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Player FeeTVC-->
+        <scene sceneID="CbY-na-K7b">
+            <objects>
+                <tableViewController id="wZc-xG-FMO" customClass="PlayerFeeTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="j0H-xT-mSa">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="336"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wZc-xG-FMO" id="hWk-rE-Fyq"/>
+                            <outlet property="delegate" destination="wZc-xG-FMO" id="jdc-Sd-u8v"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eR-jR-YST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2391" y="-523.5"/>
+        </scene>
+        <!--Document List View Controller-->
         <scene sceneID="al3-Xc-sXN">
             <objects>
-                <viewController id="aGl-CH-j3s" sceneMemberID="viewController">
+                <viewController id="aGl-CH-j3s" customClass="DocumentListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="04O-UP-W2x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1993,6 +2014,7 @@
                             <containerView opaque="NO" contentMode="scaleAspectFill" id="Nig-BK-Wiu">
                                 <rect key="frame" x="20" y="64.000004987706703" width="280" height="268"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <connections>
                                     <segue destination="PDj-TT-J0s" kind="embed" id="gT8-wc-SPP"/>
@@ -2001,6 +2023,7 @@
                             <containerView opaque="NO" contentMode="scaleAspectFill" id="jCG-tb-VCJ">
                                 <rect key="frame" x="20" y="332" width="280" height="236"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <connections>
                                     <segue destination="nCa-Tp-eSR" kind="embed" id="wLg-Av-tqz"/>
@@ -2013,6 +2036,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGM-b2-uoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1999" y="-639"/>
+        </scene>
+        <!--QuotasTVC-->
+        <scene sceneID="zv9-eJ-hUw">
+            <objects>
+                <tableViewController id="zLU-nI-j6W" customClass="QuotasTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Ka-UK-k5E">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="167"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zLU-nI-j6W" id="Cnu-jr-4HR"/>
+                            <outlet property="delegate" destination="zLU-nI-j6W" id="X7y-Fj-mkm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUV-xH-NYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2391" y="-775.5"/>
         </scene>
         <!--Fee List View Controller-->
         <scene sceneID="LJA-8K-Fvm">
@@ -2040,34 +2081,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V8C-ou-1Wt">
-                                <rect key="frame" x="0.0" y="65" width="320" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCuotas" id="wea-s4-Nhd">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wea-s4-Nhd" id="cAn-G1-QWh">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fdz-Gh-x9T">
-                                <rect key="frame" x="0.0" y="231" width="320" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCuotasJugadores" id="uqH-uL-gXb">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uqH-uL-gXb" id="pc2-xL-ceL">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <containerView opaque="NO" contentMode="scaleAspectFill" id="kmg-qf-I4B">
+                                <rect key="frame" x="20" y="65.000003172633583" width="280" height="167"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <connections>
+                                    <segue destination="zLU-nI-j6W" kind="embed" id="DZc-Dw-drv"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleAspectFill" id="NUL-lY-LIc">
+                                <rect key="frame" x="20" y="232" width="280" height="336"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <connections>
+                                    <segue destination="wZc-xG-FMO" kind="embed" id="NUq-vS-YzB"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2094,16 +2123,14 @@
                                                 <segue destination="zf0-1C-hZk" kind="custom" customClass="DismissSegue" id="uRC-gf-1So"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="check.png" id="fX4-RC-PJ9"/>
+                                        <barButtonItem key="rightBarButtonItem" image="check.png" id="fX4-RC-PJ9" userLabel="Save">
+                                            <connections>
+                                                <action selector="btnSavePressed:" destination="zf0-1C-hZk" id="8RW-sH-635"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Concepto" minimumFontSize="17" id="07p-aa-0jB">
-                                <rect key="frame" x="16" y="129" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concepto de la cuota" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AD8-XI-i8J">
                                 <rect key="frame" x="16" y="100" width="252" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -2111,20 +2138,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" id="vMm-m1-xWS">
-                                <rect key="frame" x="68" y="167" width="236" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Concepto" minimumFontSize="17" id="07p-aa-0jB" userLabel="txtConcepto">
+                                <rect key="frame" x="16" y="129" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KJm-as-TfL">
-                                <rect key="frame" x="16" y="237" width="252" height="21"/>
+                                <rect key="frame" x="16" y="177" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="xY8-PM-EHP" userLabel="txtImporte">
+                                <rect key="frame" x="92" y="173" width="212" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtConcepto" destination="07p-aa-0jB" id="OR4-nB-yGs"/>
+                        <outlet property="txtImporte" destination="xY8-PM-EHP" id="Yuh-6Y-bvk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByM-5N-9Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2234,7 +2273,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qfe-21-Qh7"/>
+        <segue reference="emp-eR-Kbe"/>
+        <segue reference="OoS-ca-LpW"/>
         <segue reference="PNm-uJ-KtF"/>
         <segue reference="vLW-UC-ThL"/>
         <segue reference="oIX-F3-W8T"/>
@@ -2250,8 +2290,8 @@
         <segue reference="1uo-iM-eWj"/>
         <segue reference="C29-2G-W4z"/>
         <segue reference="eAc-8N-IGZ"/>
+        <segue reference="qfe-21-Qh7"/>
         <segue reference="aAQ-la-20l"/>
-        <segue reference="emp-eR-Kbe"/>
         <segue reference="6py-nr-lnV"/>
         <segue reference="Yc4-jT-TfZ"/>
         <segue reference="Ar5-bk-e2f"/>

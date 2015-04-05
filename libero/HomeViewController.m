@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "Globals.h"
 
 @interface HomeViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    firstrunning = false;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.profilePictureView.profileID = fbUser.objectID;
 }
 
 - (void)didReceiveMemoryWarning {

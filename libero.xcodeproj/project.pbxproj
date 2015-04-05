@@ -20,6 +20,25 @@
 		3C7563671ACE648F001EBB8B /* PlayerDocTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563661ACE648F001EBB8B /* PlayerDocTVC.m */; };
 		3C75636A1ACE6611001EBB8B /* DocPlayerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563691ACE6611001EBB8B /* DocPlayerTVC.m */; };
 		3C75636D1ACE9B4A001EBB8B /* PlayerAtteTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */; };
+		3C75637E1ACFAA81001EBB8B /* CLWeeklyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563701ACFAA81001EBB8B /* CLWeeklyCalendarView.m */; };
+		3C75637F1ACFAA81001EBB8B /* DailyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563721ACFAA81001EBB8B /* DailyCalendarView.m */; };
+		3C7563801ACFAA81001EBB8B /* DayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563741ACFAA81001EBB8B /* DayTitleLabel.m */; };
+		3C7563811ACFAA81001EBB8B /* NSDate+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563771ACFAA81001EBB8B /* NSDate+CL.m */; };
+		3C7563821ACFAA81001EBB8B /* NSDictionary+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563791ACFAA81001EBB8B /* NSDictionary+CL.m */; };
+		3C7563831ACFAA81001EBB8B /* UIColor+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75637B1ACFAA81001EBB8B /* UIColor+CL.m */; };
+		3C7563841ACFAA81001EBB8B /* UIImage+CL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75637D1ACFAA81001EBB8B /* UIImage+CL.m */; };
+		3C7563871ACFC27B001EBB8B /* PlayerFeeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563861ACFC27B001EBB8B /* PlayerFeeTVC.m */; };
+		3C75638A1ACFC47C001EBB8B /* QuotasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563891ACFC47C001EBB8B /* QuotasTVC.m */; };
+		3C75638E1ACFCE26001EBB8B /* CellQuota.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75638C1ACFCE26001EBB8B /* CellQuota.m */; };
+		3C75638F1ACFCE26001EBB8B /* CellQuota.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75638D1ACFCE26001EBB8B /* CellQuota.xib */; };
+		3C7563931ACFD803001EBB8B /* CellPlayerQuota.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563911ACFD803001EBB8B /* CellPlayerQuota.m */; };
+		3C7563941ACFD803001EBB8B /* CellPlayerQuota.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563921ACFD803001EBB8B /* CellPlayerQuota.xib */; };
+		3C75639A1AD09FC0001EBB8B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7563991AD09FC0001EBB8B /* Reachability.m */; };
+		3C75639C1AD0DEAE001EBB8B /* vb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75639B1AD0DEAE001EBB8B /* vb.png */; };
+		3C75639E1AD0E294001EBB8B /* vb_blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75639D1AD0E294001EBB8B /* vb_blur.png */; };
+		3C7563A01AD0E6C3001EBB8B /* vb2_blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75639F1AD0E6C3001EBB8B /* vb2_blur.png */; };
+		3C7563A21AD0E86C001EBB8B /* vb3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563A11AD0E86C001EBB8B /* vb3.png */; };
+		3C7563A41AD0EBF2001EBB8B /* vb4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7563A31AD0EBF2001EBB8B /* vb4.png */; };
 		3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */; };
 		3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */; };
 		3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5CE061AB78B0600EA1FBB /* UserEditViewController.m */; };
@@ -116,6 +135,37 @@
 		3C7563691ACE6611001EBB8B /* DocPlayerTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocPlayerTVC.m; sourceTree = "<group>"; };
 		3C75636B1ACE9B4A001EBB8B /* PlayerAtteTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAtteTVC.h; sourceTree = "<group>"; };
 		3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAtteTVC.m; sourceTree = "<group>"; };
+		3C75636F1ACFAA81001EBB8B /* CLWeeklyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWeeklyCalendarView.h; sourceTree = "<group>"; };
+		3C7563701ACFAA81001EBB8B /* CLWeeklyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWeeklyCalendarView.m; sourceTree = "<group>"; };
+		3C7563711ACFAA81001EBB8B /* DailyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCalendarView.h; sourceTree = "<group>"; };
+		3C7563721ACFAA81001EBB8B /* DailyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyCalendarView.m; sourceTree = "<group>"; };
+		3C7563731ACFAA81001EBB8B /* DayTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTitleLabel.h; sourceTree = "<group>"; };
+		3C7563741ACFAA81001EBB8B /* DayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTitleLabel.m; sourceTree = "<group>"; };
+		3C7563761ACFAA81001EBB8B /* NSDate+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CL.h"; sourceTree = "<group>"; };
+		3C7563771ACFAA81001EBB8B /* NSDate+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CL.m"; sourceTree = "<group>"; };
+		3C7563781ACFAA81001EBB8B /* NSDictionary+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CL.h"; sourceTree = "<group>"; };
+		3C7563791ACFAA81001EBB8B /* NSDictionary+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CL.m"; sourceTree = "<group>"; };
+		3C75637A1ACFAA81001EBB8B /* UIColor+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CL.h"; sourceTree = "<group>"; };
+		3C75637B1ACFAA81001EBB8B /* UIColor+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CL.m"; sourceTree = "<group>"; };
+		3C75637C1ACFAA81001EBB8B /* UIImage+CL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CL.h"; sourceTree = "<group>"; };
+		3C75637D1ACFAA81001EBB8B /* UIImage+CL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CL.m"; sourceTree = "<group>"; };
+		3C7563851ACFC27B001EBB8B /* PlayerFeeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerFeeTVC.h; sourceTree = "<group>"; };
+		3C7563861ACFC27B001EBB8B /* PlayerFeeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerFeeTVC.m; sourceTree = "<group>"; };
+		3C7563881ACFC47C001EBB8B /* QuotasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotasTVC.h; sourceTree = "<group>"; };
+		3C7563891ACFC47C001EBB8B /* QuotasTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotasTVC.m; sourceTree = "<group>"; };
+		3C75638B1ACFCE26001EBB8B /* CellQuota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellQuota.h; path = libero/CellQuota.h; sourceTree = "<group>"; };
+		3C75638C1ACFCE26001EBB8B /* CellQuota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellQuota.m; path = libero/CellQuota.m; sourceTree = "<group>"; };
+		3C75638D1ACFCE26001EBB8B /* CellQuota.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellQuota.xib; path = libero/CellQuota.xib; sourceTree = "<group>"; };
+		3C7563901ACFD803001EBB8B /* CellPlayerQuota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellPlayerQuota.h; path = libero/CellPlayerQuota.h; sourceTree = "<group>"; };
+		3C7563911ACFD803001EBB8B /* CellPlayerQuota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellPlayerQuota.m; path = libero/CellPlayerQuota.m; sourceTree = "<group>"; };
+		3C7563921ACFD803001EBB8B /* CellPlayerQuota.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellPlayerQuota.xib; path = libero/CellPlayerQuota.xib; sourceTree = "<group>"; };
+		3C7563981AD09FC0001EBB8B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = libero/Reachability.h; sourceTree = "<group>"; };
+		3C7563991AD09FC0001EBB8B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = libero/Reachability.m; sourceTree = "<group>"; };
+		3C75639B1AD0DEAE001EBB8B /* vb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vb.png; sourceTree = "<group>"; };
+		3C75639D1AD0E294001EBB8B /* vb_blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vb_blur.png; sourceTree = "<group>"; };
+		3C75639F1AD0E6C3001EBB8B /* vb2_blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vb2_blur.png; sourceTree = "<group>"; };
+		3C7563A11AD0E86C001EBB8B /* vb3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vb3.png; sourceTree = "<group>"; };
+		3C7563A31AD0EBF2001EBB8B /* vb4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vb4.png; sourceTree = "<group>"; };
 		3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageGalleryIcon.png; sourceTree = "<group>"; };
 		3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo-Video-Slr-camera-icon-150x150.png"; sourceTree = "<group>"; };
 		3CF5CE051AB78B0600EA1FBB /* UserEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditViewController.h; sourceTree = "<group>"; };
@@ -248,6 +298,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C75636E1ACFAA81001EBB8B /* CLWeeklyCalendarViewSourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				3C75636F1ACFAA81001EBB8B /* CLWeeklyCalendarView.h */,
+				3C7563701ACFAA81001EBB8B /* CLWeeklyCalendarView.m */,
+				3C7563711ACFAA81001EBB8B /* DailyCalendarView.h */,
+				3C7563721ACFAA81001EBB8B /* DailyCalendarView.m */,
+				3C7563731ACFAA81001EBB8B /* DayTitleLabel.h */,
+				3C7563741ACFAA81001EBB8B /* DayTitleLabel.m */,
+				3C7563751ACFAA81001EBB8B /* Misc */,
+			);
+			path = CLWeeklyCalendarViewSourceCode;
+			sourceTree = "<group>";
+		};
+		3C7563751ACFAA81001EBB8B /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3C7563761ACFAA81001EBB8B /* NSDate+CL.h */,
+				3C7563771ACFAA81001EBB8B /* NSDate+CL.m */,
+				3C7563781ACFAA81001EBB8B /* NSDictionary+CL.h */,
+				3C7563791ACFAA81001EBB8B /* NSDictionary+CL.m */,
+				3C75637A1ACFAA81001EBB8B /* UIColor+CL.h */,
+				3C75637B1ACFAA81001EBB8B /* UIColor+CL.m */,
+				3C75637C1ACFAA81001EBB8B /* UIImage+CL.h */,
+				3C75637D1ACFAA81001EBB8B /* UIImage+CL.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		3CF5CE081AB7A91C00EA1FBB /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +363,12 @@
 				3C7563601ACE4A0D001EBB8B /* CellAsistencia.h */,
 				3C7563611ACE4A0D001EBB8B /* CellAsistencia.m */,
 				3C7563621ACE4A0D001EBB8B /* CellAsistencia.xib */,
+				3C75638B1ACFCE26001EBB8B /* CellQuota.h */,
+				3C75638C1ACFCE26001EBB8B /* CellQuota.m */,
+				3C75638D1ACFCE26001EBB8B /* CellQuota.xib */,
+				3C7563901ACFD803001EBB8B /* CellPlayerQuota.h */,
+				3C7563911ACFD803001EBB8B /* CellPlayerQuota.m */,
+				3C7563921ACFD803001EBB8B /* CellPlayerQuota.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -291,6 +376,8 @@
 		8457F72B1AC39F1700DF5615 /* MainApplication */ = {
 			isa = PBXGroup;
 			children = (
+				3C7563981AD09FC0001EBB8B /* Reachability.h */,
+				3C7563991AD09FC0001EBB8B /* Reachability.m */,
 				845AC7011AAE2A39009CCE96 /* AppDelegate.h */,
 				845AC7021AAE2A39009CCE96 /* AppDelegate.m */,
 				8495716F1AAFE3DD00309962 /* DismissSegue.h */,
@@ -373,6 +460,7 @@
 		849571731AAFE9D700309962 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C75636E1ACFAA81001EBB8B /* CLWeeklyCalendarViewSourceCode */,
 				3CF5CE2B1AB7B2CD00EA1FBB /* MBProgressHUD.h */,
 				3CF5CE2C1AB7B2CD00EA1FBB /* MBProgressHUD.m */,
 				3CF5CE091AB7A95000EA1FBB /* Parse */,
@@ -397,6 +485,11 @@
 		849571781AAFE9E000309962 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3C75639D1AD0E294001EBB8B /* vb_blur.png */,
+				3C75639F1AD0E6C3001EBB8B /* vb2_blur.png */,
+				3C75639B1AD0DEAE001EBB8B /* vb.png */,
+				3C7563A11AD0E86C001EBB8B /* vb3.png */,
+				3C7563A31AD0EBF2001EBB8B /* vb4.png */,
 				3CF5CE011AB7883600EA1FBB /* imageGalleryIcon.png */,
 				3CF5CE021AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png */,
 				84192CFB1AB12E250032FD89 /* libero_bg.png */,
@@ -531,6 +624,8 @@
 				3C7563661ACE648F001EBB8B /* PlayerDocTVC.m */,
 				3C75636B1ACE9B4A001EBB8B /* PlayerAtteTVC.h */,
 				3C75636C1ACE9B4A001EBB8B /* PlayerAtteTVC.m */,
+				3C7563851ACFC27B001EBB8B /* PlayerFeeTVC.h */,
+				3C7563861ACFC27B001EBB8B /* PlayerFeeTVC.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -542,6 +637,8 @@
 				84192D2B1AB8BA830032FD89 /* FeeListViewController.m */,
 				84192D2D1AB8BA900032FD89 /* FeeNewViewController.h */,
 				84192D2E1AB8BA900032FD89 /* FeeNewViewController.m */,
+				3C7563881ACFC47C001EBB8B /* QuotasTVC.h */,
+				3C7563891ACFC47C001EBB8B /* QuotasTVC.m */,
 			);
 			name = Quota;
 			sourceTree = "<group>";
@@ -628,15 +725,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C75638F1ACFCE26001EBB8B /* CellQuota.xib in Resources */,
 				845AC7091AAE2A39009CCE96 /* Main.storyboard in Resources */,
 				8495717E1AAFF96F00309962 /* FBL_img_367_middle.jpg in Resources */,
+				3C7563A21AD0E86C001EBB8B /* vb3.png in Resources */,
 				3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */,
 				845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */,
 				8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */,
 				84192CF41AB0CA4A0032FD89 /* arrow_left_alt1.png in Resources */,
+				3C7563941ACFD803001EBB8B /* CellPlayerQuota.xib in Resources */,
 				3C7563571ACB9F63001EBB8B /* CellDocument.xib in Resources */,
 				84192CF81AB0CAFC0032FD89 /* Arrows-Back-icon.png in Resources */,
+				3C75639E1AD0E294001EBB8B /* vb_blur.png in Resources */,
 				8457F7301AC46C1B00DF5615 /* CellClubes.xib in Resources */,
+				3C7563A01AD0E6C3001EBB8B /* vb2_blur.png in Resources */,
 				84192CFA1AB0CFF40032FD89 /* check.png in Resources */,
 				3C75635C1ACDDD0C001EBB8B /* CellPlayers.xib in Resources */,
 				3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */,
@@ -644,8 +746,10 @@
 				845AC70B1AAE2A39009CCE96 /* Images.xcassets in Resources */,
 				849571801AAFF96F00309962 /* Volleyball6.jpg in Resources */,
 				3C7563641ACE4A0D001EBB8B /* CellAsistencia.xib in Resources */,
+				3C75639C1AD0DEAE001EBB8B /* vb.png in Resources */,
 				84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */,
 				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
+				3C7563A41AD0EBF2001EBB8B /* vb4.png in Resources */,
 				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
 				3C7563521ACB3133001EBB8B /* CellTeams.xib in Resources */,
 			);
@@ -667,6 +771,8 @@
 			files = (
 				84192D171AB8B7CB0032FD89 /* DocumentEditViewController.m in Sources */,
 				845AC7061AAE2A39009CCE96 /* ConfigurationViewController.m in Sources */,
+				3C7563831ACFAA81001EBB8B /* UIColor+CL.m in Sources */,
+				3C75637F1ACFAA81001EBB8B /* DailyCalendarView.m in Sources */,
 				84192D291AB8B9B00032FD89 /* AttendanceViewController.m in Sources */,
 				84192D141AB8B7B70032FD89 /* DocumentListViewController.m in Sources */,
 				3C7563561ACB9F63001EBB8B /* CellDocument.m in Sources */,
@@ -681,11 +787,16 @@
 				84192D0B1AB8B6790032FD89 /* ProfileEditViewController.m in Sources */,
 				845AC7031AAE2A39009CCE96 /* AppDelegate.m in Sources */,
 				84192D2C1AB8BA830032FD89 /* FeeListViewController.m in Sources */,
+				3C7563841ACFAA81001EBB8B /* UIImage+CL.m in Sources */,
+				3C7563931ACFD803001EBB8B /* CellPlayerQuota.m in Sources */,
 				84192D0E1AB8B69E0032FD89 /* TeamListViewController.m in Sources */,
+				3C75638A1ACFC47C001EBB8B /* QuotasTVC.m in Sources */,
 				3C75635F1ACDE86D001EBB8B /* PlayerTableViewController.m in Sources */,
 				84192D1D1AB8B8E80032FD89 /* AssistantListViewController.m in Sources */,
 				84192D021AB8B5430032FD89 /* ClubNewViewController.m in Sources */,
+				3C75637E1ACFAA81001EBB8B /* CLWeeklyCalendarView.m in Sources */,
 				84192D231AB8B9420032FD89 /* PlayerListViewController.m in Sources */,
+				3C7563871ACFC27B001EBB8B /* PlayerFeeTVC.m in Sources */,
 				84B0629E1ACA300A001484A1 /* DocumentTableViewController.m in Sources */,
 				3C75636D1ACE9B4A001EBB8B /* PlayerAtteTVC.m in Sources */,
 				3C75635B1ACDDD0C001EBB8B /* CellPlayers.m in Sources */,
@@ -695,10 +806,15 @@
 				84B062981AC9ECD4001484A1 /* ProfileTableViewController.m in Sources */,
 				84B0629B1ACA2DAB001484A1 /* TeamTableViewController.m in Sources */,
 				84192D321ABA0A150032FD89 /* ClubListTableViewController.m in Sources */,
+				3C75638E1ACFCE26001EBB8B /* CellQuota.m in Sources */,
 				84192D1A1AB8B8930032FD89 /* ClubAddViewController.m in Sources */,
+				3C7563821ACFAA81001EBB8B /* NSDictionary+CL.m in Sources */,
 				3C7563511ACB3133001EBB8B /* CellTeams.m in Sources */,
+				3C7563801ACFAA81001EBB8B /* DayTitleLabel.m in Sources */,
 				3CF5CE071AB78B0600EA1FBB /* UserEditViewController.m in Sources */,
 				3CF5CE411AB7D57300EA1FBB /* MenuConfigViewController.m in Sources */,
+				3C7563811ACFAA81001EBB8B /* NSDate+CL.m in Sources */,
+				3C75639A1AD09FC0001EBB8B /* Reachability.m in Sources */,
 				3C75636A1ACE6611001EBB8B /* DocPlayerTVC.m in Sources */,
 				845AC7001AAE2A39009CCE96 /* main.m in Sources */,
 				3C7563631ACE4A0D001EBB8B /* CellAsistencia.m in Sources */,

@@ -32,7 +32,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="lblDocument" destination="YHZ-0d-tmh" id="8eg-dw-jwk"/>
                 <outlet property="sw" destination="8qM-tW-98t" id="beS-Cn-Vca"/>

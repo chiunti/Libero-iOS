@@ -24,8 +24,11 @@ UIImage  *fbProfilePicture;
 id<FBGraphUser> fbUser;
 
 
-PFObject *currentUser,*currentClub, *currentPerfil, *currentTeam, *currentDocument, *currentPlayer;
+PFObject *currentUser,*currentClub, *currentPerfil, *currentTeam, *currentDocument, *currentPlayer, *currentQuota;
 NSDate *currentFecha;
+
+Boolean firstrunning;
 
 
 UIAlertView *alertError, *alertGuardar;
+

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CLWeeklyCalendarView.h"
 
 @interface AttendanceViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIDatePicker *dpFecha;
-- (IBAction)dpFechaChanged:(id)sender;
-
+@property (nonatomic, strong) CLWeeklyCalendarView* calendarView;
 @end

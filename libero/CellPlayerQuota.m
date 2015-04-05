@@ -1,14 +1,14 @@
 //
-//  CellAsistencia.m
+//  CellPlayerQuota.m
 //  libero
 //
-//  Created by Chiunti on 02/04/15.
+//  Created by Chiunti on 04/04/15.
 //  Copyright (c) 2015 chiunti. All rights reserved.
 //
 
-#import "CellAsistencia.h"
+#import "CellPlayerQuota.h"
 
-@implementation CellAsistencia
+@implementation CellPlayerQuota
 
 - (void)awakeFromNib {
     // Initialization code

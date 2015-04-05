@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface HomeViewController : UIViewController
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 
 @end

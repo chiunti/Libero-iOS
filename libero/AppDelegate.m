@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Globals.h"
+#import "Reachability.h"
+
+
+UIView *view, *backgroundView;
 
 @interface AppDelegate ()
 
@@ -17,6 +22,33 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //    Reachability
+    // Allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"www.parse.com"];
+    
+    // Set the blocks
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        // keep in mind this is called on a background thread
+        // and if you are updating the UI it needs to happen
+        // on the main thread, like this:
+        NSLog(@"REACHABLE!");
+        [self reachable];
+        //dispatch_async(dispatch_get_main_queue(), ^{
+        //    NSLog(@"REACHABLE!");
+        //});
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        NSLog(@"UNREACHABLE!");
+        [self unreachable];
+    };
+    
+    // Start the notifier, which will cause the reachability object to retain itself!
+    [reach startNotifier];
+    
     
     
     ////    Parse
@@ -58,8 +90,10 @@
     
     
     // esta condicion será cuando ya se encuentra configurada la aplicacion
+    firstrunning = true;
+    
     NSLog(@"launch Home");
-    if (true) {
+    if (false) {
         UIStoryboard *storyboard = self.window.rootViewController.storyboard;
         UIViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home"];
         self.window.rootViewController = rootViewController;
@@ -184,5 +218,76 @@
 -(void) showMessage:(NSString *)alertText withTitle:(NSString *)alertTitle{
     NSLog(@"%@",alertText);
 }
+
+-(void) unreachable{
+    
+    // Window bounds.
+    //CGRect bounds = _window.bounds;
+    
+    // Create a view and add it to the window.
+    if (!view) {
+        backgroundView = [[UIView alloc] initWithFrame: _window.bounds];
+        view = [[UIView alloc] initWithFrame: CGRectMake((_window.frame.size.width-200)/2, -200, 200, 200)];
+        [view setBackgroundColor: [UIColor whiteColor]];
+        view.layer.borderColor    = [UIColor clearColor].CGColor;
+        view.layer.borderWidth    = 1;
+        view.clipsToBounds        = YES;
+        view.layer.cornerRadius   = 10;
+        [backgroundView setBackgroundColor: [UIColor blackColor]];
+        [backgroundView setAlpha:0.5f];
+        
+    
+    
+        // Create a label and add it to the view.
+        CGRect labelFrame = CGRectMake( 0, 0, 200, 30 );
+        UILabel* label = [[UILabel alloc] initWithFrame: labelFrame];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setText: @"Líbero"];
+        [label setBackgroundColor:[UIColor blueColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        //label.layer.cornerRadius = 10;
+        [view addSubview: label];
+        
+        // Create a label and add it to the view.
+        labelFrame = CGRectMake( 10, 85, 180, 30 );
+        label = [[UILabel alloc] initWithFrame: labelFrame];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setText: @"No hay internet"];
+        [view addSubview: label];
+    }
+    
+    [_window addSubview: backgroundView];
+    [_window addSubview: view];
+    [_window makeKeyAndVisible];
+    
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         view.frame = CGRectMake((_window.frame.size.width-200)/2, 20, 200, 200);
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    //[self.view addSubview:view];
+}
+
+-(void) reachable
+{
+    if (view) {
+        [UIView animateWithDuration:0.2
+                              delay:0
+                            options: UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             view.frame = CGRectMake((_window.frame.size.width-200)/2, -200, 200 , 200);
+                         }
+                         completion:^(BOOL finished){
+                             if (finished){
+                                 [view removeFromSuperview];
+                                 [backgroundView removeFromSuperview];
+                             }
+                         }];
+    }
+}
+
 
 @end
