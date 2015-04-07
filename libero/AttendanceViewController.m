@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     UIImage *background = [UIImage imageNamed: @"vb3.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    [imageView setFrame:self.view.frame];
     
     [self.view insertSubview: imageView atIndex:0];
     

@@ -120,7 +120,44 @@
         cell.imgPhoto.image = [UIImage imageWithData:imageFile];
     }];
     
+    // set background on selected cell
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:0.6];
+    bgColorView.layer.cornerRadius = 8;
+    bgColorView.frame = cell.vCell.frame;
+    bgColorView.layer.masksToBounds = YES;
+    [cell setSelectedBackgroundView:bgColorView];
 
+    return cell;
+}
+
+// Override to customize the look of the cell that allows the user to load the next page of objects.
+// The default implementation is a UITableViewCellStyleDefault cell with simple labels.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"NextPage";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = @"más...";
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    
+    
+    // set background on selected cell
+    [cell setBackgroundColor:[UIColor clearColor]];
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+    bgColorView.layer.cornerRadius = 8;
+    bgColorView.frame = cell.frame;
+    bgColorView.layer.masksToBounds = YES;
+    [cell setBackgroundView:bgColorView];
+    
+    
     return cell;
 }
 

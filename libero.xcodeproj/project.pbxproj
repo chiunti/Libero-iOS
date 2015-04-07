@@ -101,6 +101,11 @@
 		84B062981AC9ECD4001484A1 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B062971AC9ECD4001484A1 /* ProfileTableViewController.m */; };
 		84B0629B1ACA2DAB001484A1 /* TeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0629A1ACA2DAB001484A1 /* TeamTableViewController.m */; };
 		84B0629E1ACA300A001484A1 /* DocumentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */; };
+		84B6A4641AD31FE800D591AF /* líbero180.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B6A4631AD31FE800D591AF /* líbero180.png */; };
+		84B6A4691AD320EB00D591AF /* libero58.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B6A4651AD320EB00D591AF /* libero58.png */; };
+		84B6A46A1AD320EB00D591AF /* libero80.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B6A4661AD320EB00D591AF /* libero80.png */; };
+		84B6A46B1AD320EB00D591AF /* libero87.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B6A4671AD320EB00D591AF /* libero87.png */; };
+		84B6A46C1AD320EB00D591AF /* libero120.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B6A4681AD320EB00D591AF /* libero120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +266,11 @@
 		84B0629A1ACA2DAB001484A1 /* TeamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewController.m; sourceTree = "<group>"; };
 		84B0629C1ACA300A001484A1 /* DocumentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentTableViewController.h; sourceTree = "<group>"; };
 		84B0629D1ACA300A001484A1 /* DocumentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentTableViewController.m; sourceTree = "<group>"; };
+		84B6A4631AD31FE800D591AF /* líbero180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "líbero180.png"; sourceTree = "<group>"; };
+		84B6A4651AD320EB00D591AF /* libero58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero58.png; sourceTree = "<group>"; };
+		84B6A4661AD320EB00D591AF /* libero80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero80.png; sourceTree = "<group>"; };
+		84B6A4671AD320EB00D591AF /* libero87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero87.png; sourceTree = "<group>"; };
+		84B6A4681AD320EB00D591AF /* libero120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libero120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +495,11 @@
 		849571781AAFE9E000309962 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				84B6A4651AD320EB00D591AF /* libero58.png */,
+				84B6A4661AD320EB00D591AF /* libero80.png */,
+				84B6A4671AD320EB00D591AF /* libero87.png */,
+				84B6A4681AD320EB00D591AF /* libero120.png */,
+				84B6A4631AD31FE800D591AF /* líbero180.png */,
 				3C75639D1AD0E294001EBB8B /* vb_blur.png */,
 				3C75639F1AD0E6C3001EBB8B /* vb2_blur.png */,
 				3C75639B1AD0DEAE001EBB8B /* vb.png */,
@@ -729,6 +744,7 @@
 				845AC7091AAE2A39009CCE96 /* Main.storyboard in Resources */,
 				8495717E1AAFF96F00309962 /* FBL_img_367_middle.jpg in Resources */,
 				3C7563A21AD0E86C001EBB8B /* vb3.png in Resources */,
+				84B6A4641AD31FE800D591AF /* líbero180.png in Resources */,
 				3CF5CE041AB7883600EA1FBB /* Photo-Video-Slr-camera-icon-150x150.png in Resources */,
 				845AC70E1AAE2A39009CCE96 /* LaunchScreen.xib in Resources */,
 				8495717F1AAFF96F00309962 /* volleyball-wallpaper-4.jpg in Resources */,
@@ -739,7 +755,10 @@
 				3C75639E1AD0E294001EBB8B /* vb_blur.png in Resources */,
 				8457F7301AC46C1B00DF5615 /* CellClubes.xib in Resources */,
 				3C7563A01AD0E6C3001EBB8B /* vb2_blur.png in Resources */,
+				84B6A46B1AD320EB00D591AF /* libero87.png in Resources */,
+				84B6A46C1AD320EB00D591AF /* libero120.png in Resources */,
 				84192CFA1AB0CFF40032FD89 /* check.png in Resources */,
+				84B6A46A1AD320EB00D591AF /* libero80.png in Resources */,
 				3C75635C1ACDDD0C001EBB8B /* CellPlayers.xib in Resources */,
 				3CF5CE031AB7883600EA1FBB /* imageGalleryIcon.png in Resources */,
 				84192CF61AB0CAB00032FD89 /* inWV5.png in Resources */,
@@ -750,6 +769,7 @@
 				84192CFC1AB12E250032FD89 /* libero_bg.png in Resources */,
 				8495717A1AAFE9E000309962 /* gear-32x32.png in Resources */,
 				3C7563A41AD0EBF2001EBB8B /* vb4.png in Resources */,
+				84B6A4691AD320EB00D591AF /* libero58.png in Resources */,
 				849571821AB0046900309962 /* volleyball-25782_640.png in Resources */,
 				3C7563521ACB3133001EBB8B /* CellTeams.xib in Resources */,
 			);

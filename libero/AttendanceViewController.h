@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CLWeeklyCalendarView.h"
 
-@interface AttendanceViewController : UIViewController
+@interface AttendanceViewController : UIViewController<CLWeeklyCalendarViewDelegate>
 @property (nonatomic, strong) CLWeeklyCalendarView* calendarView;
 @end
