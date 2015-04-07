@@ -191,9 +191,11 @@ UILabel *lblDebe;
         [perfil fetch];
         cell.lblPerfil.text = [perfil objectForKey:@"nombre"];
         
+        
         PFObject *equipo = [object objectForKey:@"equipo"];
         [equipo fetch];
         cell.lblEquipo.text = [equipo objectForKey:@"nombre"];
+
         
         
         PFFile *theImage = [object objectForKey:@"imagen"];
@@ -212,6 +214,18 @@ UILabel *lblDebe;
         [query whereKey:@"cuota" equalTo:currentQuota];
         
         NSArray *cuotas = [query findObjects];
+       
+        /*
+        if (cuotas.count>0) {
+            NSNumber *ndebe = [cuotas[0] objectForKey:@"debe"];
+            if ([ndebe doubleValue]>0) {
+                cell.lblEquipo.text = [cuotas[0] objectForKey:@"debe"];
+            } else if ([[object objectForKey:@"cambio"] doubleValue]>0) {
+                cell.lblEquipo.text = [cuotas[0] objectForKey:@"cambio"];
+            }
+        }
+        
+        */
         
         [cell.sw setOn:cuotas.count>0];
         
@@ -308,11 +322,19 @@ UILabel *lblDebe;
 
 -(void)btnOkPressed
 {
-    //NSNumber *ndebe = [currentQuota objectForKey:@"importe"];
-    //ndebe =  [[NSNumber alloc] initWithDouble:[txtView.text doubleValue]];
+    NSNumber *importe = [currentQuota objectForKey:@"importe"];
+    NSNumber *abono =   [[NSNumber alloc] initWithDouble:[txtView.text doubleValue]];
     
     currentAbono[@"abono"] = [[NSNumber alloc] initWithDouble:[txtView.text doubleValue]];
-    //currentAbono[@"debe"] = ndebe;
+    if ([importe doubleValue] >= [abono doubleValue])
+    {
+        currentAbono[@"debe"] =  [[NSNumber alloc] initWithDouble: ([importe doubleValue] - [abono doubleValue])];
+        currentAbono[@"cambio"] = @0;
+    } else {
+        currentAbono[@"cambio"] =  [[NSNumber alloc] initWithDouble: ([abono doubleValue] - [importe doubleValue])];
+        currentAbono[@"debe"] = @0;
+
+    }
     [currentAbono saveInBackground];
     [self ocultarCaptura];
 }
