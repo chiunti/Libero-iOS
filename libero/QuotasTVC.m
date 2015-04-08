@@ -87,6 +87,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     static NSString *CellIdentifier = @"CellQuota";
+    // alloc formatter
+    NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
+    
+    // set options.
+    [currencyStyle setFormatterBehavior:NSNumberFormatterBehavior10_4];
+    [currencyStyle setNumberStyle:NSNumberFormatterCurrencyStyle];
     
     CellQuota *cell = (CellQuota *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -97,7 +103,9 @@
     }
     // Configure the cell
     cell.lblQuota.text = [object objectForKey:@"nombre"];
-    cell.lblImporte.text = [NSString stringWithFormat:@"%@",[object objectForKey:@"importe"]];
+    
+    cell.lblImporte.text = [currencyStyle stringFromNumber:[object objectForKey:@"importe"]];
+    //cell.lblImporte.text = [NSString stringWithFormat:@"%@",[object objectForKey:@"importe"]];
     
     // set background on selected cell
     UIView *bgColorView = [[UIView alloc] init];

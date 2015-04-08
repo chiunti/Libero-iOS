@@ -15,6 +15,7 @@ UIView *vQuota;
 UIView *backgroundView;
 CGFloat altura = 200;
 PFObject *currentAbono;
+CellPlayerQuota *cell;
 UISwitch *sw;
 UITextField *txtView;
 UILabel *lblCuota;
@@ -69,17 +70,25 @@ UILabel *lblDebe;
     
     
     // Create a label and add it to the view.
+    labelFrame = CGRectMake( 10, 60, 130, 30 );
+    lblCuota = [[UILabel alloc] initWithFrame: labelFrame];
+    lblCuota.text = @"abono";
+    [vQuota addSubview: lblCuota];
+    
+    
+    // Create a label and add it to the view.
     labelFrame = CGRectMake( 10, 30, [UIScreen mainScreen].bounds.size.width-20, 30 );
     lblCuota = [[UILabel alloc] initWithFrame: labelFrame];
     [vQuota addSubview: lblCuota];
     
     
-    labelFrame = CGRectMake( 10, 60, [UIScreen mainScreen].bounds.size.width-20, 30 );
+    labelFrame = CGRectMake( [UIScreen mainScreen].bounds.size.width-150, 60, 130, 30 );
     txtView = [[UITextField alloc] initWithFrame:labelFrame];
     [txtView setPlaceholder:@"Abono"];
     txtView.keyboardType = UIKeyboardTypeDecimalPad;
     txtView.borderStyle = UITextBorderStyleRoundedRect;
     txtView.textAlignment = NSTextAlignmentRight;
+    txtView.clearButtonMode = UITextFieldViewModeAlways;
     [vQuota addSubview: txtView];
     
     labelFrame =  CGRectMake( 10, 130, 130, 30 );
@@ -170,8 +179,17 @@ UILabel *lblDebe;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     static NSString *CellIdentifier = @"CellPlayerQuota";
+    // alloc formatter
+    NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
     
-    CellPlayerQuota *cell = (CellPlayerQuota *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // set options.
+    [currencyStyle setFormatterBehavior:NSNumberFormatterBehavior10_4];
+    [currencyStyle setNumberStyle:NSNumberFormatterCurrencyStyle];
+
+    
+    
+    
+    cell = (CellPlayerQuota *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
     {
@@ -187,14 +205,15 @@ UILabel *lblDebe;
         // Configure the cell
         cell.lblPlayer.text = [object objectForKey:@"nombre"];
         
+        /*
         PFObject *perfil = [object objectForKey:@"perfil"];
         [perfil fetch];
         cell.lblPerfil.text = [perfil objectForKey:@"nombre"];
-        
+        */
         
         PFObject *equipo = [object objectForKey:@"equipo"];
         [equipo fetch];
-        cell.lblEquipo.text = [equipo objectForKey:@"nombre"];
+        cell.lblPerfil.text = [equipo objectForKey:@"nombre"];
 
         
         
@@ -215,17 +234,30 @@ UILabel *lblDebe;
         
         NSArray *cuotas = [query findObjects];
        
-        /*
+        cell.lblEquipo.text = @"";
+        cell.lblEquipo.textAlignment = NSTextAlignmentRight;
+        cell.lblEquipo.layer.cornerRadius = 5;
+        cell.lblEquipo.clipsToBounds = YES;
+        cell.lblEquipo.backgroundColor = [UIColor clearColor];
+        
         if (cuotas.count>0) {
-            NSNumber *ndebe = [cuotas[0] objectForKey:@"debe"];
+            PFObject *estaQuota = [cuotas objectAtIndex:0];
+            NSNumber *ndebe     = [estaQuota objectForKey:@"debe"];
+            NSNumber *ncambio   = [estaQuota objectForKey:@"cambio"];
             if ([ndebe doubleValue]>0) {
-                cell.lblEquipo.text = [cuotas[0] objectForKey:@"debe"];
-            } else if ([[object objectForKey:@"cambio"] doubleValue]>0) {
-                cell.lblEquipo.text = [cuotas[0] objectForKey:@"cambio"];
+                cell.lblEquipo.text = [currencyStyle stringFromNumber:ndebe];
+                cell.lblEquipo.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
+            } else if ([ncambio doubleValue]>0) {
+                cell.lblEquipo.text = [currencyStyle stringFromNumber:ncambio];
+                cell.lblEquipo.backgroundColor = [[UIColor cyanColor] colorWithAlphaComponent:0.5];
+            } else {
+                cell.lblEquipo.text = @"OK";
+                cell.lblEquipo.textAlignment = NSTextAlignmentCenter;
+                cell.lblEquipo.textColor = [UIColor greenColor];
             }
         }
         
-        */
+        
         
         [cell.sw setOn:cuotas.count>0];
         
@@ -279,6 +311,28 @@ UILabel *lblDebe;
 }
 
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell = (CellPlayerQuota*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.sw.isOn) {
+   
+        PFQuery *query = [PFQuery queryWithClassName:@"cuotasjugador"];
+        [query whereKey:@"jugador" equalTo:[self objectAtIndexPath:indexPath]];
+        [query whereKey:@"cuota" equalTo:currentQuota];
+        
+        NSArray *cuotas = [query findObjects];
+        if (cuotas.count>0){
+            currentAbono = [cuotas objectAtIndex:0];
+            sw = cell.sw;
+            [self verCaptura];
+        }
+        
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:false];
+}
+
+
 - (void) swPChanged:(id)sender
 {
     sw = (UISwitch *) sender;
@@ -309,15 +363,30 @@ UILabel *lblDebe;
         for (PFObject *object in cuotas) {
             [object deleteInBackground];
         }
+        // quitar etiqueta
+        //cell.lblEquipo.text = @"";
+        //cell.lblEquipo.backgroundColor = [UIColor clearColor];
+        
+        [self refreshCellForRow:sw.tag];
         
     }
     
 }
 
+-(void)refreshCellForRow:(NSInteger)row
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    NSArray *indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
+}
+
 -(void)btnCancelPressed
 {
-    [sw setOn:false];
+    //[sw setOn:false];
     [self ocultarCaptura];
+    [self refreshCellForRow:sw.tag];
 }
 
 -(void)btnOkPressed
@@ -336,13 +405,19 @@ UILabel *lblDebe;
 
     }
     [currentAbono saveInBackground];
+    
     [self ocultarCaptura];
+    
+    [self refreshCellForRow:sw.tag];
+
+    
+    
 }
 
 -(void)verCaptura
 {
     [txtView becomeFirstResponder];
-    [txtView setText:@""];
+    txtView.text = [currentAbono[@"abono"] stringValue];
     [lblCuota setText: [NSString stringWithFormat:@"%@: $%@", [currentQuota objectForKey:@"nombre"],[currentQuota objectForKey:@"importe"]]];
     [self.parentViewController.view addSubview:backgroundView];
     [self.parentViewController.view addSubview:vQuota];
